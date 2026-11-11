@@ -1,5 +1,5 @@
 Cohort,Households,Zones represented,Use
 Full dataset (main EDA),93307,1179,Main EDA; no exclusions
-Known vehicle count (diagnostic only),93306,1179,Provisional diagnostic; not a final model sample
-Known vehicle and dwelling (diagnostic only),93297,1179,Provisional diagnostic; not a final model sample
+Known vehicle count (diagnostic only),93307,1179,Provisional diagnostic; not a final model sample
+Known vehicle and dwelling (diagnostic only),93298,1179,Provisional diagnostic; not a final model sample
 "Known vehicle/dwelling, fewer than 10 vehicles (sensitivity only)",93265,1179,Provisional diagnostic; not a final model sample

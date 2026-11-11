@@ -6,7 +6,7 @@ rec-mail,Survey process,Y received letter; N did not; 9 unknown,Not a predictor
 n-call,Survey process,Calls or edits to complete interview,Not a predictor
 tripday,Category,1 Monday through 5 Friday,Candidate control
 nperson,Count,"All residents, including children under 11",Proposed core predictor
-nvehicle,Count with unknown,Personal-use vehicles; 99 provisionally unknown,Household characteristic
+nvehicle,Count,"Personal-use vehicles; documented range 0-99; 99 tabulated numerically (guide pp. 18, 51)",Household characteristic
 nlicence,Count,Residents holding a driving licence,Cross-classification predictor
 nempft,Count,Full-time workers including home workers,Composition predictor
 nemppt,Count,Part-time workers including home workers,Composition predictor
@@ -14,11 +14,11 @@ nemphome,Overlapping count,Home workers already inside full/part-time counts,Com
 nstudent,Count,Full/part-time students; includes ages 6-10; can overlap workers,Composition predictor
 nhhldtrip,Count,Recorded person trips on survey weekday; ages 11+,Outcome
 expf,Weight,Household expansion factor; positive,Weighting choice belongs to methodology
-nvehicle_clean,Derived,nvehicle with provisional unknown 99 set to missing,Preparation or analysis
+nvehicle_clean,Derived,"Numeric copy of nvehicle; all values 0-99 retained, including 99; guide pp. 18, 51",Preparation or analysis
 dwelltype_clean,Derived,dwelltype with unknown 9 set to missing,Preparation or analysis
 rec_mail_clean,Derived,Advance-letter text with unknown 9 set to missing,Preparation or analysis
 workers,Derived,nempft + nemppt; home workers are not added again,Preparation or analysis
-unknown_vehicle,Flag,Raw nvehicle equals 99,Preparation or analysis
+vehicle_99_review,Flag,"Raw nvehicle equals 99; documented numeric value retained, flagged only for leverage/sensitivity review",Preparation or analysis
 unknown_dwelling,Flag,Raw dwelltype equals 9,Preparation or analysis
 unknown_advance_letter,Flag,Raw rec-mail equals code 9; no eligibility exclusion,Preparation or analysis
 high_vehicle,Flag,"Known vehicle count at least 10; flag, not automatic deletion",Preparation or analysis
@@ -31,8 +31,8 @@ eligible_high_vehicle_sensitivity,Flag,Known vehicles/dwelling and fewer than 10
 ineligible_core_reason,Derived,Reason vehicle completeness flag is false; not a final exclusion,Preparation or analysis
 ineligible_comparison_reason,Derived,Completeness issues separated by semicolon; not final exclusions,Preparation or analysis
 size_cat_proposed,Derived,"1,2,3,4,5+; proposal for EDA, not a final model boundary",Preparation or analysis
-veh_cat_proposed,Derived,"0,1,2,3+; unknown remains missing",Preparation or analysis
-veh_cat_alternative,Derived,"0,1,2,3,4+; unknown remains missing",Preparation or analysis
+veh_cat_proposed,Derived,"0,1,2,3+; all recorded vehicle values included",Preparation or analysis
+veh_cat_alternative,Derived,"0,1,2,3,4+; all recorded vehicle values included",Preparation or analysis
 dwelling,Derived,"Descriptive label, including Unknown; not numeric model coding",Preparation or analysis
 weekday,Derived,Descriptive Monday-Friday label,Preparation or analysis
 region,Derived,Region inferred from documented zone ranges,Preparation or analysis

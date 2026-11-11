@@ -1,6 +1,6 @@
 ﻿variable,source_n,available_n,missing_n,unique_values,mean,sd,min,p25,median,p75,p95,p99,max,zero_n,zero_pct_available,skewness,outside_1_5_IQR_n,IQR_interpretation
 nperson,93307,93307,0,14,2.741176975,1.418985277,1,2,2,4,5,7,16,0,0,0.8031531167,349,Descriptive only; not an exclusion rule; can flag common nonzero counts when IQR is zero
-nvehicle_clean,93307,93306,1,20,1.382301245,0.9746364518,0,1,1,2,3,4,36,15295,16.3923006,2.423434181,1914,Descriptive only; not an exclusion rule; can flag common nonzero counts when IQR is zero
+nvehicle_clean,93307,93307,0,21,1.383347444,1.025686882,0,1,1,2,3,4,99,15295,16.39212492,11.31554798,1915,Descriptive only; not an exclusion rule; can flag common nonzero counts when IQR is zero
 nlicence,93307,93307,0,10,1.730095277,0.9827282546,0,1,2,2,3,4,9,8964,9.60699626,0.4772148434,4515,Descriptive only; not an exclusion rule; can flag common nonzero counts when IQR is zero
 nempft,93307,93307,0,8,1.113024746,0.926627008,0,0,1,2,3,4,7,27902,29.90343704,0.5039057205,17,Descriptive only; not an exclusion rule; can flag common nonzero counts when IQR is zero
 nemppt,93307,93307,0,6,0.2382350735,0.5119546215,0,0,0,0,1,2,5,74410,79.74750019,2.308762312,18897,Descriptive only; not an exclusion rule; can flag common nonzero counts when IQR is zero

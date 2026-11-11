@@ -1,6 +1,6 @@
 ﻿sample,variable,characteristic,n,mean,sd,minimum,p25,median,p75,maximum,zero_n,zero_pct
 Full dataset (available values),nperson,Household size,93307,2.741176975,1.418985277,1,2,2,4,16,0,0
-Full dataset (available values),nvehicle_clean,Vehicles available,93306,1.382301245,0.9746364518,0,1,1,2,36,15295,16.3923006
+Full dataset (available values),nvehicle_clean,Vehicles available,93307,1.383347444,1.025686882,0,1,1,2,99,15295,16.39212492
 Full dataset (available values),nlicence,Licensed drivers,93307,1.730095277,0.9827282546,0,1,2,2,9,8964,9.60699626
 Full dataset (available values),nempft,Full-time workers,93307,1.113024746,0.926627008,0,0,1,2,7,27902,29.90343704
 Full dataset (available values),nemppt,Part-time workers,93307,0.2382350735,0.5119546215,0,0,0,0,5,74410,79.74750019

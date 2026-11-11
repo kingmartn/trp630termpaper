@@ -1,0 +1,130 @@
+﻿scenario,predictor,n,VIF,note
+Exact vehicles: all known values,nperson,93298,3.159312348,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,nlicence,93298,2.611637593,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,nempft,93298,1.792723442,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,nemppt,93298,1.234266135,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,nstudent,93298,2.090121908,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,nemphome,93298,1.049025315,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,nvehicle_clean,93298,1.90935474,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,dwelling_Apartment,93298,1.377696533,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,dwelling_Townhouse,93298,1.054362922,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,weekday_Tuesday,93298,1.687032087,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,weekday_Wednesday,93298,1.673816133,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,weekday_Thursday,93298,1.717946185,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,weekday_Friday,93298,1.759236848,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,region_Durham,93298,1.138209818,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,region_York,93298,1.199008489,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: all known values,region_Peel,93298,1.183363214,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,nperson,93265,3.160317618,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,nlicence,93265,2.840836923,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,nempft,93265,1.800610647,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,nemppt,93265,1.234182384,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,nstudent,93265,2.093420934,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,nemphome,93265,1.049328481,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,nvehicle_clean,93265,2.355373917,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,dwelling_Apartment,93265,1.400872808,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,dwelling_Townhouse,93265,1.057512368,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,weekday_Tuesday,93265,1.687072018,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,weekday_Wednesday,93265,1.673873844,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,weekday_Thursday,93265,1.717946042,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,weekday_Friday,93265,1.759180962,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,region_Durham,93265,1.148251054,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,region_York,93265,1.210048911,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=10 sensitivity,region_Peel,93265,1.19194997,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,nperson,93231,3.159393241,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,nlicence,93231,2.855662163,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,nempft,93231,1.799994692,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,nemppt,93231,1.234122017,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,nstudent,93231,2.093952569,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,nemphome,93231,1.049321406,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,nvehicle_clean,93231,2.388518722,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,dwelling_Apartment,93231,1.403150051,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,dwelling_Townhouse,93231,1.057703367,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,weekday_Tuesday,93231,1.68690553,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,weekday_Wednesday,93231,1.673752334,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,weekday_Thursday,93231,1.717662376,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,weekday_Friday,93231,1.758986978,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,region_Durham,93231,1.148715677,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,region_York,93231,1.210409044,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=7 exploratory sensitivity,region_Peel,93231,1.19226834,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,nperson,92898,3.147466358,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,nlicence,92898,2.833477153,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,nempft,92898,1.784323343,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,nemppt,92898,1.232033366,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,nstudent,92898,2.098375457,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,nemphome,92898,1.048821048,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,nvehicle_clean,92898,2.404725275,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,dwelling_Apartment,92898,1.409358089,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,dwelling_Townhouse,92898,1.057602162,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,weekday_Tuesday,92898,1.686976644,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,weekday_Wednesday,92898,1.673638983,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,weekday_Thursday,92898,1.717802826,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,weekday_Friday,92898,1.759002652,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,region_Durham,92898,1.147936573,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,region_York,92898,1.209577642,Column VIF; indicator values are not factor-level generalized VIFs
+Exact vehicles: omit >=5 exploratory sensitivity,region_Peel,92898,1.19193558,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,nperson,93298,3.158969767,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,nlicence,93298,2.880166507,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,nempft,93298,1.786956327,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,nemppt,93298,1.236108795,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,nstudent,93298,2.088763946,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,nemphome,93298,1.049608788,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,log1p_vehicles,93298,2.375792236,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,dwelling_Apartment,93298,1.430138741,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,dwelling_Townhouse,93298,1.053053544,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,weekday_Tuesday,93298,1.687031942,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,weekday_Wednesday,93298,1.673855816,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,weekday_Thursday,93298,1.717940906,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,weekday_Friday,93298,1.759300837,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,region_Durham,93298,1.146066045,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,region_York,93298,1.207123073,Column VIF; indicator values are not factor-level generalized VIFs
+Log1p vehicles: same complete cases,region_Peel,93298,1.193521512,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,nperson,93298,3.162988301,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,nlicence,93298,2.918741958,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,nempft,93298,1.814553738,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,nemppt,93298,1.244543608,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,nstudent,93298,2.09849766,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,nemphome,93298,1.049945879,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,vehicles_1,93298,2.726984487,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,vehicles_2,93298,3.95524656,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,vehicles_3,93298,2.387476996,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,vehicles_4plus,93298,1.580893479,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,dwelling_Apartment,93298,1.445149493,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,dwelling_Townhouse,93298,1.062749023,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,weekday_Tuesday,93298,1.687068383,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,weekday_Wednesday,93298,1.673871679,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,weekday_Thursday,93298,1.717963235,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,weekday_Friday,93298,1.759421016,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,region_Durham,93298,1.151033671,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,region_York,93298,1.21615745,Column VIF; indicator values are not factor-level generalized VIFs
+Grouped vehicles 0/1/2/3/4+: same complete cases,region_Peel,93298,1.196487844,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,nperson,93298,3.15796645,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,nlicence,93298,2.145392045,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,nempft,93298,1.775408003,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,nemppt,93298,1.234256099,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,nstudent,93298,2.083260489,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,nemphome,93298,1.048634248,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,dwelling_Apartment,93298,1.326104448,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,dwelling_Townhouse,93298,1.047832662,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,weekday_Tuesday,93298,1.687027209,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,weekday_Wednesday,93298,1.673792613,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,weekday_Thursday,93298,1.717923436,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,weekday_Friday,93298,1.759210595,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,region_Durham,93298,1.120096919,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,region_York,93298,1.179729022,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: same complete cases,region_Peel,93298,1.167377632,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,nperson,93298,3.15796645,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,nlicence,93298,2.145392045,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,nempft,93298,1.775408003,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,nemppt,93298,1.234256099,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,nstudent,93298,2.083260489,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,nemphome,93298,1.048634248,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,dwelling_Apartment,93298,1.326104448,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,dwelling_Townhouse,93298,1.047832662,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,weekday_Tuesday,93298,1.687027209,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,weekday_Wednesday,93298,1.673792613,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,weekday_Thursday,93298,1.717923436,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,weekday_Friday,93298,1.759210595,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,region_Durham,93298,1.120096919,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,region_York,93298,1.179729022,Column VIF; indicator values are not factor-level generalized VIFs
+Vehicles omitted: all known dwellings,region_Peel,93298,1.167377632,Column VIF; indicator values are not factor-level generalized VIFs

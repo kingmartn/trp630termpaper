@@ -1,6 +1,6 @@
 ﻿variable,last_category,full_dataset_n_in_last_category,purpose
 nperson,8 or more,349,Display only; exact counts retained; no model boundary fixed
-nvehicle_clean,6 or more,128,Display only; exact counts retained; no model boundary fixed
+nvehicle_clean,6 or more,129,Display only; exact counts retained; no model boundary fixed
 nlicence,6 or more,103,Display only; exact counts retained; no model boundary fixed
 nempft,5 or more,130,Display only; exact counts retained; no model boundary fixed
 nemppt,3 or more,349,Display only; exact counts retained; no model boundary fixed

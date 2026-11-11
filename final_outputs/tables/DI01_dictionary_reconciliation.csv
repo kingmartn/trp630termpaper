@@ -1,0 +1,16 @@
+﻿project_field,guide_field,source_definition,printed_pages,PDF_pages,analysis_implication
+hnum,hhld_num,Six-digit household sample identifier,16,21,"Identifier, not a substantive predictor"
+gta01hhld,gta01_hhld,2001 GTA zone system; retain 2001 regional ranges,"14, 16","19, 21",Do not substitute 2006 zone ranges
+dwelltype,dwell_type,1 House; 2 Apartment; 3 Townhouse; 9 Unknown,"17, 50","22, 55",Only documented dwelling unknowns affect dwelling completeness
+rec-mail,rec_mail,Y Yes; N No; 9 Unknown / refused in tabulations,"17, 50","22, 55",Survey-process field; no blanket row deletion
+n-call,n_call,Number of calls or edit attempts to complete interview,17,22,Survey-process variable; no undocumented missing code inferred
+tripday,trip_day,1 Monday through 5 Friday; unknown 9 specified for 1986/1991,"18, 50","23, 55",Observed 2006 weekdays 1-5; categorical control
+nperson,n_person,Numeric household size 1-99,"18, 50","23, 55",Large sizes are not automatically codes for missing
+nvehicle,n_vehicle,Numeric vehicles 0-99; 99 explicitly tabulated as 99,"18, 51","23, 56",Retain numeric 99; replace earlier missing-value assumption with sensitivity flag
+nlicence,n_licence,Numeric licensed-driver count 0-9,"18, 51","23, 56",Numeric 9 is not automatically Unknown
+nempft,n_emp_ft,Numeric 0-9; includes full-time work-at-home persons since 1996,"18, 53","23, 58",Do not double count home workers
+nemppt,n_emp_pt,Numeric 0-9; includes part-time work-at-home persons since 1996,"18, 53","23, 58",Do not double count home workers
+nemphome,n_emp_home,"Numeric 0-9, full-/part-time home workers","18, 53","23, 58",Overlaps full-/part-time counts
+nstudent,n_student,Numeric 0-9; ages 6-10 assumed full-time students; employment/student statuses can overlap,"2, 18, 53","7, 23, 58",Overlap is not by itself an inconsistency
+nhhldtrip,n_hhld_trip,Numeric 0-99; 2006 recorded trips cover persons aged 11+,"1, 18, 51-52","6, 23, 56-57",Retain zeros; acknowledge outcome age coverage
+expf,expf,Household expansion factor; expansion zones use census dwelling-unit controls,"2, 4, 18","7, 9, 23",Not a substantive predictor; sampling/weighting convention must be explicit

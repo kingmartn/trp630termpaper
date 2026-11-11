@@ -40,7 +40,7 @@
 349306,251,3,N,1,4,11,1,3,1,0,0,7,12,18.27,1,1,household_size_at_least_10,Retained; inspect before any model exclusion decision
 422234,257,1,Y,3,1,1,12,1,0,0,0,0,8,17.16,12,0,known_vehicles_at_least_10,Retained; inspect before any model exclusion decision
 503584,260,1,Y,3,3,5,11,2,2,0,0,3,10,17.16,11,2,known_vehicles_at_least_10,Retained; inspect before any model exclusion decision
-422873,270,1,N,8,2,2,99,2,2,0,0,0,13,18.17,,2,unknown_vehicle_99,Retained; inspect before any model exclusion decision
+422873,270,1,N,8,2,2,99,2,2,0,0,0,13,18.17,99,2,vehicle_numeric_99_review; known_vehicles_at_least_10,Retained; inspect before any model exclusion decision
 383625,271,1,Y,2,3,5,2,4,3,0,0,1,32,21.32,2,3,recorded_trips_at_least_30,Retained; inspect before any model exclusion decision
 281710,272,1,Y,1,3,10,2,3,0,2,2,3,16,16.36,2,2,household_size_at_least_10,Retained; inspect before any model exclusion decision
 316142,275,9,Y,8,3,1,0,0,0,0,0,0,0,18.44,0,0,unknown_dwelling_9,Retained; inspect before any model exclusion decision
