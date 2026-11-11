@@ -1,0 +1,58 @@
+Check,Flagged records or cells,Status,Note,Decision
+Blank cells in named fields,0,blocking,,Stop before writing if this check is nonzero
+Duplicate household IDs,0,blocking,,Stop before writing if this check is nonzero
+Duplicate complete named records,0,blocking,,Stop before writing if this check is nonzero
+hnum: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+hnum: noninteger,0,blocking,,Stop before writing if this check is nonzero
+hnum: outside permitted audit range,0,blocking,,Stop before writing if this check is nonzero
+gta01hhld: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+gta01hhld: noninteger,0,blocking,,Stop before writing if this check is nonzero
+gta01hhld: outside permitted audit range,0,blocking,,Stop before writing if this check is nonzero
+dwelltype: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+dwelltype: noninteger,0,blocking,,Stop before writing if this check is nonzero
+n-call: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+n-call: noninteger,0,blocking,,Stop before writing if this check is nonzero
+n-call: outside permitted audit range,0,blocking,,Stop before writing if this check is nonzero
+tripday: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+tripday: noninteger,0,blocking,,Stop before writing if this check is nonzero
+nperson: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+nperson: noninteger,0,blocking,,Stop before writing if this check is nonzero
+nperson: outside permitted audit range,0,blocking,,Stop before writing if this check is nonzero
+nvehicle: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+nvehicle: noninteger,0,blocking,,Stop before writing if this check is nonzero
+nvehicle: outside permitted audit range,0,blocking,,Stop before writing if this check is nonzero
+nlicence: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+nlicence: noninteger,0,blocking,,Stop before writing if this check is nonzero
+nlicence: outside permitted audit range,0,blocking,,Stop before writing if this check is nonzero
+nempft: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+nempft: noninteger,0,blocking,,Stop before writing if this check is nonzero
+nempft: outside permitted audit range,0,blocking,,Stop before writing if this check is nonzero
+nemppt: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+nemppt: noninteger,0,blocking,,Stop before writing if this check is nonzero
+nemppt: outside permitted audit range,0,blocking,,Stop before writing if this check is nonzero
+nemphome: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+nemphome: noninteger,0,blocking,,Stop before writing if this check is nonzero
+nemphome: outside permitted audit range,0,blocking,,Stop before writing if this check is nonzero
+nstudent: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+nstudent: noninteger,0,blocking,,Stop before writing if this check is nonzero
+nstudent: outside permitted audit range,0,blocking,,Stop before writing if this check is nonzero
+nhhldtrip: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+nhhldtrip: noninteger,0,blocking,,Stop before writing if this check is nonzero
+nhhldtrip: outside permitted audit range,0,blocking,,Stop before writing if this check is nonzero
+expf: nonnumeric or nonfinite,0,blocking,,Stop before writing if this check is nonzero
+Nonpositive expansion factors,0,blocking,,Stop before writing if this check is nonzero
+Unexpected dwelling code,0,blocking,,Stop before writing if this check is nonzero
+Unexpected weekday code,0,blocking,,Stop before writing if this check is nonzero
+Unexpected advance-letter code,0,blocking,,Stop before writing if this check is nonzero
+Zone outside documented study-region ranges,0,blocking,,Stop before writing if this check is nonzero
+Licences exceed residents,0,blocking,,Stop before writing if this check is nonzero
+Students exceed residents,0,blocking,,Stop before writing if this check is nonzero
+Workers exceed residents,0,blocking,,Stop before writing if this check is nonzero
+Home workers exceed total workers,0,blocking,,Stop before writing if this check is nonzero
+unknown_vehicle,1,handling recorded,Raw nvehicle equals 99,Retained in full EDA; vehicle-specific summaries use available values; model handling undecided
+unknown_dwelling,9,handling recorded,Raw dwelltype equals 9,Retained as Unknown in full EDA; model handling undecided
+unknown_advance_letter,576,handling recorded,Raw rec-mail equals code 9; no eligibility exclusion,Retained; survey-process field is not a substantive predictor
+high_vehicle,32,handling recorded,"Known vehicle count at least 10; flag, not automatic deletion",Retained in main samples; flagged for a possible later sensitivity check
+zero_trip,10480,handling recorded,Recorded trips equal zero; retain,Retained; no exclusion based on zero trips
+home_double_count_exceeds_size,3702,handling recorded,workers + nemphome exceeds nperson; informational,Retained; do not add home workers to full- and part-time totals
+workers_students_exceed_size,6533,handling recorded,workers + nstudent exceeds nperson; overlapping statuses,Retained; employment and student statuses may overlap

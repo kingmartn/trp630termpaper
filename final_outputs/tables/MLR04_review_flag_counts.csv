@@ -1,0 +1,6 @@
+﻿flag,households,decision
+unknown_vehicle_99,1,Review only; no deletion
+unknown_dwelling_9,9,Review only; no deletion
+known_vehicles_at_least_10,32,Review only; no deletion
+household_size_at_least_10,58,Review only; no deletion
+recorded_trips_at_least_30,112,Review only; no deletion

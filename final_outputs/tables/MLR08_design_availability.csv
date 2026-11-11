@@ -1,0 +1,30 @@
+﻿scenario,issue,households,note
+Size and licensed drivers,Missing nperson,0,Reason counts may overlap; diagnostic availability only
+Size and licensed drivers,Missing nlicence,0,Reason counts may overlap; diagnostic availability only
+Size and vehicles,Missing nperson,0,Reason counts may overlap; diagnostic availability only
+Size and vehicles,Missing nvehicle_clean,1,Reason counts may overlap; diagnostic availability only
+"Size, drivers and vehicles",Missing nperson,0,Reason counts may overlap; diagnostic availability only
+"Size, drivers and vehicles",Missing nlicence,0,Reason counts may overlap; diagnostic availability only
+"Size, drivers and vehicles",Missing nvehicle_clean,1,Reason counts may overlap; diagnostic availability only
+Separate employment counts + controls,Missing nperson,0,Reason counts may overlap; diagnostic availability only
+Separate employment counts + controls,Missing nvehicle_clean,1,Reason counts may overlap; diagnostic availability only
+Separate employment counts + controls,Missing nlicence,0,Reason counts may overlap; diagnostic availability only
+Separate employment counts + controls,Missing nempft,0,Reason counts may overlap; diagnostic availability only
+Separate employment counts + controls,Missing nemppt,0,Reason counts may overlap; diagnostic availability only
+Separate employment counts + controls,Missing nstudent,0,Reason counts may overlap; diagnostic availability only
+Separate employment counts + controls,Missing nemphome,0,Reason counts may overlap; diagnostic availability only
+Separate employment counts + controls,Unknown dwelling,9,Reason counts may overlap; diagnostic availability only
+Total workers alternative + controls,Missing nperson,0,Reason counts may overlap; diagnostic availability only
+Total workers alternative + controls,Missing nvehicle_clean,1,Reason counts may overlap; diagnostic availability only
+Total workers alternative + controls,Missing nlicence,0,Reason counts may overlap; diagnostic availability only
+Total workers alternative + controls,Missing workers,0,Reason counts may overlap; diagnostic availability only
+Total workers alternative + controls,Missing nstudent,0,Reason counts may overlap; diagnostic availability only
+Total workers alternative + controls,Missing nemphome,0,Reason counts may overlap; diagnostic availability only
+Total workers alternative + controls,Unknown dwelling,9,Reason counts may overlap; diagnostic availability only
+Invalid: workers and both employment components,Missing nperson,0,Reason counts may overlap; diagnostic availability only
+Invalid: workers and both employment components,Missing nvehicle_clean,1,Reason counts may overlap; diagnostic availability only
+Invalid: workers and both employment components,Missing nlicence,0,Reason counts may overlap; diagnostic availability only
+Invalid: workers and both employment components,Missing nempft,0,Reason counts may overlap; diagnostic availability only
+Invalid: workers and both employment components,Missing nemppt,0,Reason counts may overlap; diagnostic availability only
+Invalid: workers and both employment components,Missing workers,0,Reason counts may overlap; diagnostic availability only
+Invalid: workers and both employment components,Missing nstudent,0,Reason counts may overlap; diagnostic availability only

@@ -1,0 +1,11 @@
+﻿sample,variable,characteristic,n,mean,sd,minimum,p25,median,p75,maximum,zero_n,zero_pct
+Raw supplied data,nperson,Household size,93307,2.741176975,1.418985277,1,2,2,4,16,0,0
+Raw supplied data,nvehicle,Vehicles available (raw; 99 = unknown),93307,1.383347444,1.025686882,0,1,1,2,99,15295,16.39212492
+Raw supplied data,nlicence,Licensed drivers,93307,1.730095277,0.9827282546,0,1,2,2,9,8964,9.60699626
+Raw supplied data,nempft,Full-time workers,93307,1.113024746,0.926627008,0,0,1,2,7,27902,29.90343704
+Raw supplied data,nemppt,Part-time workers,93307,0.2382350735,0.5119546215,0,0,0,0,5,74410,79.74750019
+Raw supplied data,nemphome,Home workers,93307,0.1080411973,0.3548633347,0,0,0,0,7,84512,90.57412627
+Raw supplied data,nstudent,Students,93307,0.6351506318,0.9538266937,0,0,0,1,9,57826,61.97391407
+Raw supplied data,workers,Total workers,93307,1.35125982,1.049564039,0,1,1,2,10,22980,24.62837729
+Raw supplied data,expf,Expansion factor,93307,19.38384516,2.50874119,10.83,17.67,19.35,20.98,28.06,0,0
+Raw supplied data,nhhldtrip,Weekday household trips,93307,5.643252918,4.56247928,0,2,4,8,55,10480,11.23174038

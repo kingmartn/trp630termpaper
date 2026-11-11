@@ -1,0 +1,9 @@
+﻿variable,n,pearson,spearman,characteristic
+nperson,93307,0.5713173724,0.6137228009,Household size
+nvehicle_clean,93306,0.4112094998,0.481963031,Vehicles available
+nlicence,93307,0.512863949,0.5585407222,Licensed drivers
+nempft,93307,0.4408945513,0.5068589284,Full-time workers
+nemppt,93307,0.2914536105,0.2641924074,Part-time workers
+nemphome,93307,0.08773793253,0.08264935102,Home workers
+nstudent,93307,0.5168502626,0.5048564185,Students
+workers,93307,0.5314166654,0.5808519812,Total workers

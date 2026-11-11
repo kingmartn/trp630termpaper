@@ -1,0 +1,6 @@
+View or issue,Households,Handling
+Supplied households,93307,Original workbook preserved
+Prepared master and main EDA,93307,All supplied rows retained; unknowns recoded or labeled
+Unavailable vehicle count,1,Omitted only from calculations requiring numeric vehicles
+Unknown dwelling code,9,Shown as Unknown; no row exclusion
+High vehicle count,32,Retained; sensitivity analysis only

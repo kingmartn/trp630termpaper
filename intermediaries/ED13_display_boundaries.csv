@@ -1,0 +1,10 @@
+﻿variable,last_category,full_dataset_n_in_last_category,purpose
+nperson,8 or more,349,Display only; exact counts retained; no model boundary fixed
+nvehicle_clean,6 or more,128,Display only; exact counts retained; no model boundary fixed
+nlicence,6 or more,103,Display only; exact counts retained; no model boundary fixed
+nempft,5 or more,130,Display only; exact counts retained; no model boundary fixed
+nemppt,3 or more,349,Display only; exact counts retained; no model boundary fixed
+nemphome,2 or more,1211,Display only; exact counts retained; no model boundary fixed
+nstudent,5 or more,210,Display only; exact counts retained; no model boundary fixed
+workers,6 or more,64,Display only; exact counts retained; no model boundary fixed
+nhhldtrip,25 or more,381,Distribution display only; summaries use original trip counts

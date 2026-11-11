@@ -1,0 +1,46 @@
+﻿scenario,predictor,available_n,VIF,interpretation
+Size and licensed drivers,nperson,93307,1.558975595,Column-specific VIF; no mechanical cutoff or variable deletion
+Size and licensed drivers,nlicence,93307,1.558975595,Column-specific VIF; no mechanical cutoff or variable deletion
+Size and vehicles,nperson,93306,1.220941651,Column-specific VIF; no mechanical cutoff or variable deletion
+Size and vehicles,nvehicle_clean,93306,1.220941651,Column-specific VIF; no mechanical cutoff or variable deletion
+"Size, drivers and vehicles",nperson,93306,1.560561305,Column-specific VIF; no mechanical cutoff or variable deletion
+"Size, drivers and vehicles",nlicence,93306,2.372732596,Column-specific VIF; no mechanical cutoff or variable deletion
+"Size, drivers and vehicles",nvehicle_clean,93306,1.858241849,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,nperson,93297,3.159844244,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,nvehicle_clean,93297,2.113791014,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,nlicence,93297,2.716500156,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,nempft,93297,1.795902319,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,nemppt,93297,1.2342652,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,nstudent,93297,2.091671615,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,nemphome,93297,1.049149364,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,dwelling_Apartment,93297,1.38846379,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,dwelling_Townhouse,93297,1.055720248,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,weekday_Tuesday,93297,1.686997549,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,weekday_Wednesday,93297,1.673817024,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,weekday_Thursday,93297,1.717946577,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,weekday_Friday,93297,1.759237557,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,region_Durham,93297,1.142698482,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,region_York,93297,1.203819126,Column-specific VIF; no mechanical cutoff or variable deletion
+Separate employment counts + controls,region_Peel,93297,1.187391953,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,nperson,93297,3.102671158,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,nvehicle_clean,93297,2.10319759,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,nlicence,93297,2.711735791,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,workers,93297,1.953885377,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,nstudent,93297,2.002981822,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,nemphome,93297,1.046860446,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,dwelling_Apartment,93297,1.388381899,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,dwelling_Townhouse,93297,1.055612168,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,weekday_Tuesday,93297,1.686997518,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,weekday_Wednesday,93297,1.673808807,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,weekday_Thursday,93297,1.717921861,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,weekday_Friday,93297,1.759220344,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,region_Durham,93297,1.142355669,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,region_York,93297,1.203775022,Column-specific VIF; no mechanical cutoff or variable deletion
+Total workers alternative + controls,region_Peel,93297,1.186778681,Column-specific VIF; no mechanical cutoff or variable deletion
+Invalid: workers and both employment components,nperson,93306,,Undefined for this rank-deficient design; remove algebraic duplication
+Invalid: workers and both employment components,nvehicle_clean,93306,,Undefined for this rank-deficient design; remove algebraic duplication
+Invalid: workers and both employment components,nlicence,93306,,Undefined for this rank-deficient design; remove algebraic duplication
+Invalid: workers and both employment components,nempft,93306,,Undefined for this rank-deficient design; remove algebraic duplication
+Invalid: workers and both employment components,nemppt,93306,,Undefined for this rank-deficient design; remove algebraic duplication
+Invalid: workers and both employment components,workers,93306,,Undefined for this rank-deficient design; remove algebraic duplication
+Invalid: workers and both employment components,nstudent,93306,,Undefined for this rank-deficient design; remove algebraic duplication

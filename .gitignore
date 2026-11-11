@@ -1,0 +1,17 @@
+# Local assistant working files, backups, environments, and execution logs
+/intermediaries/chat/
+
+# Machine-specific editor configuration
+/.vscode/
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environment secrets
+.env
+.env.*
+!.env.example
