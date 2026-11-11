@@ -1,0 +1,302 @@
+﻿family,rule,step,effect,df_effect,clustered_F,p_clustered,p_classical,df_cluster_denominator,can_drop,retention_status
+Separate employment main effects,p01,0,size,1,157.032068872,6.58073468328e-34,1.25584544676e-55,1178,False,Prespecified substantive core
+Separate employment main effects,p01,0,vehicles,1,599.306473463,2.48988603706e-107,1.15175221681e-186,1178,True,Eligible for removal
+Separate employment main effects,p01,0,drivers,1,748.877436719,4.97091346829e-128,1.70579436445e-215,1178,True,Eligible for removal
+Separate employment main effects,p01,0,full_time,1,2781.04083841,0,0,1178,True,Eligible for removal
+Separate employment main effects,p01,0,part_time,1,1426.17267563,3.73076243874e-205,0,1178,True,Eligible for removal
+Separate employment main effects,p01,0,home_workers,1,24.9809744193,6.66613013866e-07,1.50036753384e-11,1178,True,Eligible for removal
+Separate employment main effects,p01,0,students,1,4690.39649998,0,0,1178,True,Eligible for removal
+Separate employment main effects,p01,0,dwelling,2,232.270397385,9.2375134877e-86,1.44086865707e-114,1178,True,Eligible for removal
+Separate employment main effects,p01,0,weekday,4,18.4755346617,9.75298846217e-15,4.19804465197e-14,1178,True,Eligible for removal
+Separate employment main effects,p01,0,region,3,2.92494724846,0.032865278637,0.000669951561702,1178,True,Eligible for removal
+Separate employment main effects,p01,1,size,1,150.677246878,1.11332417481e-32,1.78322398192e-54,1178,False,Prespecified substantive core
+Separate employment main effects,p01,1,vehicles,1,661.283433128,4.11403953179e-116,9.84110186496e-197,1178,True,Eligible for removal
+Separate employment main effects,p01,1,drivers,1,741.558288189,4.69060061106e-127,1.18828624681e-214,1178,True,Eligible for removal
+Separate employment main effects,p01,1,full_time,1,2820.95416681,0,0,1178,True,Eligible for removal
+Separate employment main effects,p01,1,part_time,1,1432.26528218,9.4107145492e-206,0,1178,True,Eligible for removal
+Separate employment main effects,p01,1,home_workers,1,25.3610289299,5.49644744881e-07,1.27771516055e-11,1178,True,Eligible for removal
+Separate employment main effects,p01,1,students,1,4675.46175054,0,0,1178,True,Eligible for removal
+Separate employment main effects,p01,1,dwelling,2,247.384841639,1.99840906084e-90,8.60328641406e-120,1178,True,Eligible for removal
+Separate employment main effects,p01,1,weekday,4,18.0610832931,2.08489249314e-14,8.35581172475e-14,1178,True,Eligible for removal
+Separate employment main effects,aic,0,size,1,157.032068872,6.58073468328e-34,1.25584544676e-55,1178,False,Prespecified substantive core
+Separate employment main effects,aic,0,vehicles,1,599.306473463,2.48988603706e-107,1.15175221681e-186,1178,True,Eligible for removal
+Separate employment main effects,aic,0,drivers,1,748.877436719,4.97091346829e-128,1.70579436445e-215,1178,True,Eligible for removal
+Separate employment main effects,aic,0,full_time,1,2781.04083841,0,0,1178,True,Eligible for removal
+Separate employment main effects,aic,0,part_time,1,1426.17267563,3.73076243874e-205,0,1178,True,Eligible for removal
+Separate employment main effects,aic,0,home_workers,1,24.9809744193,6.66613013866e-07,1.50036753384e-11,1178,True,Eligible for removal
+Separate employment main effects,aic,0,students,1,4690.39649998,0,0,1178,True,Eligible for removal
+Separate employment main effects,aic,0,dwelling,2,232.270397385,9.2375134877e-86,1.44086865707e-114,1178,True,Eligible for removal
+Separate employment main effects,aic,0,weekday,4,18.4755346617,9.75298846217e-15,4.19804465197e-14,1178,True,Eligible for removal
+Separate employment main effects,aic,0,region,3,2.92494724846,0.032865278637,0.000669951561702,1178,True,Eligible for removal
+Separate employment main effects,bic,0,size,1,157.032068872,6.58073468328e-34,1.25584544676e-55,1178,False,Prespecified substantive core
+Separate employment main effects,bic,0,vehicles,1,599.306473463,2.48988603706e-107,1.15175221681e-186,1178,True,Eligible for removal
+Separate employment main effects,bic,0,drivers,1,748.877436719,4.97091346829e-128,1.70579436445e-215,1178,True,Eligible for removal
+Separate employment main effects,bic,0,full_time,1,2781.04083841,0,0,1178,True,Eligible for removal
+Separate employment main effects,bic,0,part_time,1,1426.17267563,3.73076243874e-205,0,1178,True,Eligible for removal
+Separate employment main effects,bic,0,home_workers,1,24.9809744193,6.66613013866e-07,1.50036753384e-11,1178,True,Eligible for removal
+Separate employment main effects,bic,0,students,1,4690.39649998,0,0,1178,True,Eligible for removal
+Separate employment main effects,bic,0,dwelling,2,232.270397385,9.2375134877e-86,1.44086865707e-114,1178,True,Eligible for removal
+Separate employment main effects,bic,0,weekday,4,18.4755346617,9.75298846217e-15,4.19804465197e-14,1178,True,Eligible for removal
+Separate employment main effects,bic,0,region,3,2.92494724846,0.032865278637,0.000669951561702,1178,True,Eligible for removal
+Separate employment main effects,bic,1,size,1,150.677246878,1.11332417481e-32,1.78322398192e-54,1178,False,Prespecified substantive core
+Separate employment main effects,bic,1,vehicles,1,661.283433128,4.11403953179e-116,9.84110186496e-197,1178,True,Eligible for removal
+Separate employment main effects,bic,1,drivers,1,741.558288189,4.69060061106e-127,1.18828624681e-214,1178,True,Eligible for removal
+Separate employment main effects,bic,1,full_time,1,2820.95416681,0,0,1178,True,Eligible for removal
+Separate employment main effects,bic,1,part_time,1,1432.26528218,9.4107145492e-206,0,1178,True,Eligible for removal
+Separate employment main effects,bic,1,home_workers,1,25.3610289299,5.49644744881e-07,1.27771516055e-11,1178,True,Eligible for removal
+Separate employment main effects,bic,1,students,1,4675.46175054,0,0,1178,True,Eligible for removal
+Separate employment main effects,bic,1,dwelling,2,247.384841639,1.99840906084e-90,8.60328641406e-120,1178,True,Eligible for removal
+Separate employment main effects,bic,1,weekday,4,18.0610832931,2.08489249314e-14,8.35581172475e-14,1178,True,Eligible for removal
+Total workers main effects,p01,0,size,1,138.680480409,2.41300272761e-30,3.56755491616e-50,1178,False,Prespecified substantive core
+Total workers main effects,p01,0,vehicles,1,568.152710893,8.46196137641e-103,1.20497272085e-180,1178,True,Eligible for removal
+Total workers main effects,p01,0,drivers,1,754.763097348,8.22721163263e-129,1.34978118529e-220,1178,True,Eligible for removal
+Total workers main effects,p01,0,workers,1,3381.56814523,0,0,1178,True,Eligible for removal
+Total workers main effects,p01,0,home_workers,1,22.5939862854,2.24793603148e-06,1.36253086861e-10,1178,True,Eligible for removal
+Total workers main effects,p01,0,students,1,4658.29862415,0,0,1178,True,Eligible for removal
+Total workers main effects,p01,0,dwelling,2,231.142062979,2.07604512825e-85,3.25786564012e-114,1178,True,Eligible for removal
+Total workers main effects,p01,0,weekday,4,18.4193140386,1.08113791222e-14,5.05453474176e-14,1178,True,Eligible for removal
+Total workers main effects,p01,0,region,3,3.20258882017,0.0225688037258,0.000284306514992,1178,True,Eligible for removal
+Total workers main effects,p01,1,size,1,132.046108127,4.8318317747e-29,6.76088512964e-49,1178,False,Prespecified substantive core
+Total workers main effects,p01,1,vehicles,1,625.207921269,4.88867579391e-111,2.44787254786e-190,1178,True,Eligible for removal
+Total workers main effects,p01,1,drivers,1,747.487333735,7.60832949356e-128,8.39532983844e-220,1178,True,Eligible for removal
+Total workers main effects,p01,1,workers,1,3430.483728,0,0,1178,True,Eligible for removal
+Total workers main effects,p01,1,home_workers,1,22.8899017312,1.93276072904e-06,1.23479700808e-10,1178,True,Eligible for removal
+Total workers main effects,p01,1,students,1,4637.3196533,0,0,1178,True,Eligible for removal
+Total workers main effects,p01,1,dwelling,2,246.335320576,4.18669049527e-90,1.83808673192e-119,1178,True,Eligible for removal
+Total workers main effects,p01,1,weekday,4,17.9729145694,2.45078666327e-14,1.05710343469e-13,1178,True,Eligible for removal
+Total workers main effects,aic,0,size,1,138.680480409,2.41300272761e-30,3.56755491616e-50,1178,False,Prespecified substantive core
+Total workers main effects,aic,0,vehicles,1,568.152710893,8.46196137641e-103,1.20497272085e-180,1178,True,Eligible for removal
+Total workers main effects,aic,0,drivers,1,754.763097348,8.22721163263e-129,1.34978118529e-220,1178,True,Eligible for removal
+Total workers main effects,aic,0,workers,1,3381.56814523,0,0,1178,True,Eligible for removal
+Total workers main effects,aic,0,home_workers,1,22.5939862854,2.24793603148e-06,1.36253086861e-10,1178,True,Eligible for removal
+Total workers main effects,aic,0,students,1,4658.29862415,0,0,1178,True,Eligible for removal
+Total workers main effects,aic,0,dwelling,2,231.142062979,2.07604512825e-85,3.25786564012e-114,1178,True,Eligible for removal
+Total workers main effects,aic,0,weekday,4,18.4193140386,1.08113791222e-14,5.05453474176e-14,1178,True,Eligible for removal
+Total workers main effects,aic,0,region,3,3.20258882017,0.0225688037258,0.000284306514992,1178,True,Eligible for removal
+Total workers main effects,bic,0,size,1,138.680480409,2.41300272761e-30,3.56755491616e-50,1178,False,Prespecified substantive core
+Total workers main effects,bic,0,vehicles,1,568.152710893,8.46196137641e-103,1.20497272085e-180,1178,True,Eligible for removal
+Total workers main effects,bic,0,drivers,1,754.763097348,8.22721163263e-129,1.34978118529e-220,1178,True,Eligible for removal
+Total workers main effects,bic,0,workers,1,3381.56814523,0,0,1178,True,Eligible for removal
+Total workers main effects,bic,0,home_workers,1,22.5939862854,2.24793603148e-06,1.36253086861e-10,1178,True,Eligible for removal
+Total workers main effects,bic,0,students,1,4658.29862415,0,0,1178,True,Eligible for removal
+Total workers main effects,bic,0,dwelling,2,231.142062979,2.07604512825e-85,3.25786564012e-114,1178,True,Eligible for removal
+Total workers main effects,bic,0,weekday,4,18.4193140386,1.08113791222e-14,5.05453474176e-14,1178,True,Eligible for removal
+Total workers main effects,bic,0,region,3,3.20258882017,0.0225688037258,0.000284306514992,1178,True,Eligible for removal
+Total workers main effects,bic,1,size,1,132.046108127,4.8318317747e-29,6.76088512964e-49,1178,False,Prespecified substantive core
+Total workers main effects,bic,1,vehicles,1,625.207921269,4.88867579391e-111,2.44787254786e-190,1178,True,Eligible for removal
+Total workers main effects,bic,1,drivers,1,747.487333735,7.60832949356e-128,8.39532983844e-220,1178,True,Eligible for removal
+Total workers main effects,bic,1,workers,1,3430.483728,0,0,1178,True,Eligible for removal
+Total workers main effects,bic,1,home_workers,1,22.8899017312,1.93276072904e-06,1.23479700808e-10,1178,True,Eligible for removal
+Total workers main effects,bic,1,students,1,4637.3196533,0,0,1178,True,Eligible for removal
+Total workers main effects,bic,1,dwelling,2,246.335320576,4.18669049527e-90,1.83808673192e-119,1178,True,Eligible for removal
+Total workers main effects,bic,1,weekday,4,17.9729145694,2.45078666327e-14,1.05710343469e-13,1178,True,Eligible for removal
+Size and vehicle curvature,p01,0,size,1,243.825248706,4.22230802325e-50,3.55419993799e-66,1178,False,Prespecified substantive core
+Size and vehicle curvature,p01,0,vehicles,1,1000.0464307,2.07922092445e-159,5.10939423847e-226,1178,False,Required by hierarchy: vehicles_squared
+Size and vehicle curvature,p01,0,drivers,1,609.254631027,9.2475884175e-109,7.65981867279e-176,1178,True,Eligible for removal
+Size and vehicle curvature,p01,0,full_time,1,2759.81688084,5.52564314288e-311,0,1178,True,Eligible for removal
+Size and vehicle curvature,p01,0,part_time,1,1465.06298921,5.9890254488e-209,0,1178,True,Eligible for removal
+Size and vehicle curvature,p01,0,home_workers,1,27.3129514913,2.04543700146e-07,2.04604432033e-12,1178,True,Eligible for removal
+Size and vehicle curvature,p01,0,students,1,4797.63042654,0,0,1178,True,Eligible for removal
+Size and vehicle curvature,p01,0,dwelling,2,172.462539376,2.02729483772e-66,1.03312395717e-83,1178,True,Eligible for removal
+Size and vehicle curvature,p01,0,weekday,4,18.1490641375,1.77427941382e-14,8.5821216619e-14,1178,True,Eligible for removal
+Size and vehicle curvature,p01,0,region,3,3.13425952023,0.0247618466442,0.000253145393607,1178,True,Eligible for removal
+Size and vehicle curvature,p01,0,size_squared,1,17.9428071051,2.45385425043e-05,6.39933981245e-13,1178,True,Eligible for removal
+Size and vehicle curvature,p01,0,vehicles_squared,1,150.046732341,1.47514287644e-32,1.0435367536e-49,1178,True,Eligible for removal
+Size and vehicle curvature,p01,1,size,1,235.128830816,1.59004567665e-48,5.72892268721e-65,1178,False,Prespecified substantive core
+Size and vehicle curvature,p01,1,vehicles,1,1102.77184138,3.29649114325e-171,3.79744926081e-234,1178,False,Required by hierarchy: vehicles_squared
+Size and vehicle curvature,p01,1,drivers,1,603.369125247,6.47383683936e-108,2.42876886864e-175,1178,True,Eligible for removal
+Size and vehicle curvature,p01,1,full_time,1,2796.72868393,0,0,1178,True,Eligible for removal
+Size and vehicle curvature,p01,1,part_time,1,1470.71748944,1.69949048458e-209,0,1178,True,Eligible for removal
+Size and vehicle curvature,p01,1,home_workers,1,27.565718653,1.80018641543e-07,2.00275468921e-12,1178,True,Eligible for removal
+Size and vehicle curvature,p01,1,students,1,4781.81022078,0,0,1178,True,Eligible for removal
+Size and vehicle curvature,p01,1,dwelling,2,177.861614199,3.15933723134e-68,5.0666651989e-86,1178,True,Eligible for removal
+Size and vehicle curvature,p01,1,weekday,4,17.6906433249,4.11329867797e-14,1.80122292271e-13,1178,True,Eligible for removal
+Size and vehicle curvature,p01,1,size_squared,1,17.907837234,2.49866568987e-05,6.70661378469e-13,1178,True,Eligible for removal
+Size and vehicle curvature,p01,1,vehicles_squared,1,148.933786114,2.42496732572e-32,2.47091652078e-49,1178,True,Eligible for removal
+Size and vehicle curvature,aic,0,size,1,243.825248706,4.22230802325e-50,3.55419993799e-66,1178,False,Prespecified substantive core
+Size and vehicle curvature,aic,0,vehicles,1,1000.0464307,2.07922092445e-159,5.10939423847e-226,1178,False,Required by hierarchy: vehicles_squared
+Size and vehicle curvature,aic,0,drivers,1,609.254631027,9.2475884175e-109,7.65981867279e-176,1178,True,Eligible for removal
+Size and vehicle curvature,aic,0,full_time,1,2759.81688084,5.52564314288e-311,0,1178,True,Eligible for removal
+Size and vehicle curvature,aic,0,part_time,1,1465.06298921,5.9890254488e-209,0,1178,True,Eligible for removal
+Size and vehicle curvature,aic,0,home_workers,1,27.3129514913,2.04543700146e-07,2.04604432033e-12,1178,True,Eligible for removal
+Size and vehicle curvature,aic,0,students,1,4797.63042654,0,0,1178,True,Eligible for removal
+Size and vehicle curvature,aic,0,dwelling,2,172.462539376,2.02729483772e-66,1.03312395717e-83,1178,True,Eligible for removal
+Size and vehicle curvature,aic,0,weekday,4,18.1490641375,1.77427941382e-14,8.5821216619e-14,1178,True,Eligible for removal
+Size and vehicle curvature,aic,0,region,3,3.13425952023,0.0247618466442,0.000253145393607,1178,True,Eligible for removal
+Size and vehicle curvature,aic,0,size_squared,1,17.9428071051,2.45385425043e-05,6.39933981245e-13,1178,True,Eligible for removal
+Size and vehicle curvature,aic,0,vehicles_squared,1,150.046732341,1.47514287644e-32,1.0435367536e-49,1178,True,Eligible for removal
+Size and vehicle curvature,bic,0,size,1,243.825248706,4.22230802325e-50,3.55419993799e-66,1178,False,Prespecified substantive core
+Size and vehicle curvature,bic,0,vehicles,1,1000.0464307,2.07922092445e-159,5.10939423847e-226,1178,False,Required by hierarchy: vehicles_squared
+Size and vehicle curvature,bic,0,drivers,1,609.254631027,9.2475884175e-109,7.65981867279e-176,1178,True,Eligible for removal
+Size and vehicle curvature,bic,0,full_time,1,2759.81688084,5.52564314288e-311,0,1178,True,Eligible for removal
+Size and vehicle curvature,bic,0,part_time,1,1465.06298921,5.9890254488e-209,0,1178,True,Eligible for removal
+Size and vehicle curvature,bic,0,home_workers,1,27.3129514913,2.04543700146e-07,2.04604432033e-12,1178,True,Eligible for removal
+Size and vehicle curvature,bic,0,students,1,4797.63042654,0,0,1178,True,Eligible for removal
+Size and vehicle curvature,bic,0,dwelling,2,172.462539376,2.02729483772e-66,1.03312395717e-83,1178,True,Eligible for removal
+Size and vehicle curvature,bic,0,weekday,4,18.1490641375,1.77427941382e-14,8.5821216619e-14,1178,True,Eligible for removal
+Size and vehicle curvature,bic,0,region,3,3.13425952023,0.0247618466442,0.000253145393607,1178,True,Eligible for removal
+Size and vehicle curvature,bic,0,size_squared,1,17.9428071051,2.45385425043e-05,6.39933981245e-13,1178,True,Eligible for removal
+Size and vehicle curvature,bic,0,vehicles_squared,1,150.046732341,1.47514287644e-32,1.0435367536e-49,1178,True,Eligible for removal
+Size and vehicle curvature,bic,1,size,1,235.128830816,1.59004567665e-48,5.72892268721e-65,1178,False,Prespecified substantive core
+Size and vehicle curvature,bic,1,vehicles,1,1102.77184138,3.29649114325e-171,3.79744926081e-234,1178,False,Required by hierarchy: vehicles_squared
+Size and vehicle curvature,bic,1,drivers,1,603.369125247,6.47383683936e-108,2.42876886864e-175,1178,True,Eligible for removal
+Size and vehicle curvature,bic,1,full_time,1,2796.72868393,0,0,1178,True,Eligible for removal
+Size and vehicle curvature,bic,1,part_time,1,1470.71748944,1.69949048458e-209,0,1178,True,Eligible for removal
+Size and vehicle curvature,bic,1,home_workers,1,27.565718653,1.80018641543e-07,2.00275468921e-12,1178,True,Eligible for removal
+Size and vehicle curvature,bic,1,students,1,4781.81022078,0,0,1178,True,Eligible for removal
+Size and vehicle curvature,bic,1,dwelling,2,177.861614199,3.15933723134e-68,5.0666651989e-86,1178,True,Eligible for removal
+Size and vehicle curvature,bic,1,weekday,4,17.6906433249,4.11329867797e-14,1.80122292271e-13,1178,True,Eligible for removal
+Size and vehicle curvature,bic,1,size_squared,1,17.907837234,2.49866568987e-05,6.70661378469e-13,1178,True,Eligible for removal
+Size and vehicle curvature,bic,1,vehicles_squared,1,148.933786114,2.42496732572e-32,2.47091652078e-49,1178,True,Eligible for removal
+Size by licensed drivers,p01,0,size,1,145.028289691,1.39236087746e-31,2.19614792735e-53,1178,False,Prespecified substantive core
+Size by licensed drivers,p01,0,vehicles,1,582.591205809,6.56726396244e-105,1.32163714012e-182,1178,True,Eligible for removal
+Size by licensed drivers,p01,0,drivers,1,772.059099339,4.2988431324e-131,4.41101879175e-217,1178,False,Required by hierarchy: size_by_drivers
+Size by licensed drivers,p01,0,full_time,1,2772.69737777,0,0,1178,True,Eligible for removal
+Size by licensed drivers,p01,0,part_time,1,1427.02357786,3.07731163529e-205,0,1178,True,Eligible for removal
+Size by licensed drivers,p01,0,home_workers,1,25.6243563232,4.80912016333e-07,8.67265223283e-12,1178,True,Eligible for removal
+Size by licensed drivers,p01,0,students,1,4702.34826314,0,0,1178,True,Eligible for removal
+Size by licensed drivers,p01,0,dwelling,2,219.907721479,7.00501078362e-82,1.14719890875e-110,1178,True,Eligible for removal
+Size by licensed drivers,p01,0,weekday,4,18.411715178,1.09629900134e-14,4.95673281295e-14,1178,True,Eligible for removal
+Size by licensed drivers,p01,0,region,3,2.8940815651,0.0342619135083,0.000735825730595,1178,True,Eligible for removal
+Size by licensed drivers,p01,0,size_by_drivers,1,4.04557957363,0.044514592045,0.00303962322768,1178,True,Eligible for removal
+Size by licensed drivers,p01,1,size,1,157.032068872,6.58073468328e-34,1.25584544676e-55,1178,False,Prespecified substantive core
+Size by licensed drivers,p01,1,vehicles,1,599.306473463,2.48988603706e-107,1.15175221681e-186,1178,True,Eligible for removal
+Size by licensed drivers,p01,1,drivers,1,748.877436719,4.97091346829e-128,1.70579436445e-215,1178,True,Eligible for removal
+Size by licensed drivers,p01,1,full_time,1,2781.04083841,0,0,1178,True,Eligible for removal
+Size by licensed drivers,p01,1,part_time,1,1426.17267563,3.73076243874e-205,0,1178,True,Eligible for removal
+Size by licensed drivers,p01,1,home_workers,1,24.9809744193,6.66613013866e-07,1.50036753384e-11,1178,True,Eligible for removal
+Size by licensed drivers,p01,1,students,1,4690.39649998,0,0,1178,True,Eligible for removal
+Size by licensed drivers,p01,1,dwelling,2,232.270397385,9.2375134877e-86,1.44086865707e-114,1178,True,Eligible for removal
+Size by licensed drivers,p01,1,weekday,4,18.4755346617,9.75298846217e-15,4.19804465197e-14,1178,True,Eligible for removal
+Size by licensed drivers,p01,1,region,3,2.92494724846,0.032865278637,0.000669951561702,1178,True,Eligible for removal
+Size by licensed drivers,p01,2,size,1,150.677246878,1.11332417481e-32,1.78322398192e-54,1178,False,Prespecified substantive core
+Size by licensed drivers,p01,2,vehicles,1,661.283433128,4.11403953179e-116,9.84110186496e-197,1178,True,Eligible for removal
+Size by licensed drivers,p01,2,drivers,1,741.558288189,4.69060061106e-127,1.18828624681e-214,1178,True,Eligible for removal
+Size by licensed drivers,p01,2,full_time,1,2820.95416681,0,0,1178,True,Eligible for removal
+Size by licensed drivers,p01,2,part_time,1,1432.26528218,9.4107145492e-206,0,1178,True,Eligible for removal
+Size by licensed drivers,p01,2,home_workers,1,25.3610289299,5.49644744881e-07,1.27771516055e-11,1178,True,Eligible for removal
+Size by licensed drivers,p01,2,students,1,4675.46175054,0,0,1178,True,Eligible for removal
+Size by licensed drivers,p01,2,dwelling,2,247.384841639,1.99840906084e-90,8.60328641406e-120,1178,True,Eligible for removal
+Size by licensed drivers,p01,2,weekday,4,18.0610832931,2.08489249314e-14,8.35581172475e-14,1178,True,Eligible for removal
+Size by licensed drivers,aic,0,size,1,145.028289691,1.39236087746e-31,2.19614792735e-53,1178,False,Prespecified substantive core
+Size by licensed drivers,aic,0,vehicles,1,582.591205809,6.56726396244e-105,1.32163714012e-182,1178,True,Eligible for removal
+Size by licensed drivers,aic,0,drivers,1,772.059099339,4.2988431324e-131,4.41101879175e-217,1178,False,Required by hierarchy: size_by_drivers
+Size by licensed drivers,aic,0,full_time,1,2772.69737777,0,0,1178,True,Eligible for removal
+Size by licensed drivers,aic,0,part_time,1,1427.02357786,3.07731163529e-205,0,1178,True,Eligible for removal
+Size by licensed drivers,aic,0,home_workers,1,25.6243563232,4.80912016333e-07,8.67265223283e-12,1178,True,Eligible for removal
+Size by licensed drivers,aic,0,students,1,4702.34826314,0,0,1178,True,Eligible for removal
+Size by licensed drivers,aic,0,dwelling,2,219.907721479,7.00501078362e-82,1.14719890875e-110,1178,True,Eligible for removal
+Size by licensed drivers,aic,0,weekday,4,18.411715178,1.09629900134e-14,4.95673281295e-14,1178,True,Eligible for removal
+Size by licensed drivers,aic,0,region,3,2.8940815651,0.0342619135083,0.000735825730595,1178,True,Eligible for removal
+Size by licensed drivers,aic,0,size_by_drivers,1,4.04557957363,0.044514592045,0.00303962322768,1178,True,Eligible for removal
+Size by licensed drivers,bic,0,size,1,145.028289691,1.39236087746e-31,2.19614792735e-53,1178,False,Prespecified substantive core
+Size by licensed drivers,bic,0,vehicles,1,582.591205809,6.56726396244e-105,1.32163714012e-182,1178,True,Eligible for removal
+Size by licensed drivers,bic,0,drivers,1,772.059099339,4.2988431324e-131,4.41101879175e-217,1178,False,Required by hierarchy: size_by_drivers
+Size by licensed drivers,bic,0,full_time,1,2772.69737777,0,0,1178,True,Eligible for removal
+Size by licensed drivers,bic,0,part_time,1,1427.02357786,3.07731163529e-205,0,1178,True,Eligible for removal
+Size by licensed drivers,bic,0,home_workers,1,25.6243563232,4.80912016333e-07,8.67265223283e-12,1178,True,Eligible for removal
+Size by licensed drivers,bic,0,students,1,4702.34826314,0,0,1178,True,Eligible for removal
+Size by licensed drivers,bic,0,dwelling,2,219.907721479,7.00501078362e-82,1.14719890875e-110,1178,True,Eligible for removal
+Size by licensed drivers,bic,0,weekday,4,18.411715178,1.09629900134e-14,4.95673281295e-14,1178,True,Eligible for removal
+Size by licensed drivers,bic,0,region,3,2.8940815651,0.0342619135083,0.000735825730595,1178,True,Eligible for removal
+Size by licensed drivers,bic,0,size_by_drivers,1,4.04557957363,0.044514592045,0.00303962322768,1178,True,Eligible for removal
+Size by licensed drivers,bic,1,size,1,139.215796453,1.89602109047e-30,3.0264119447e-52,1178,False,Prespecified substantive core
+Size by licensed drivers,bic,1,vehicles,1,637.695452073,8.33793538944e-113,2.1717855332e-192,1178,True,Eligible for removal
+Size by licensed drivers,bic,1,drivers,1,765.266817092,3.36544343071e-130,2.67322582472e-216,1178,False,Required by hierarchy: size_by_drivers
+Size by licensed drivers,bic,1,full_time,1,2812.16079223,0,0,1178,True,Eligible for removal
+Size by licensed drivers,bic,1,part_time,1,1432.70277739,8.52556018749e-206,0,1178,True,Eligible for removal
+Size by licensed drivers,bic,1,home_workers,1,26.0185864755,3.93793881282e-07,7.3383994269e-12,1178,True,Eligible for removal
+Size by licensed drivers,bic,1,students,1,4686.74718898,0,0,1178,True,Eligible for removal
+Size by licensed drivers,bic,1,dwelling,2,231.340761097,1.79999395061e-85,1.19863715919e-115,1178,True,Eligible for removal
+Size by licensed drivers,bic,1,weekday,4,17.9974828134,2.34281021636e-14,9.84250181381e-14,1178,True,Eligible for removal
+Size by licensed drivers,bic,1,size_by_drivers,1,4.13561887561,0.0422134619735,0.00272700318242,1178,True,Eligible for removal
+Size by licensed drivers,bic,2,size,1,150.677246878,1.11332417481e-32,1.78322398192e-54,1178,False,Prespecified substantive core
+Size by licensed drivers,bic,2,vehicles,1,661.283433128,4.11403953179e-116,9.84110186496e-197,1178,True,Eligible for removal
+Size by licensed drivers,bic,2,drivers,1,741.558288189,4.69060061106e-127,1.18828624681e-214,1178,True,Eligible for removal
+Size by licensed drivers,bic,2,full_time,1,2820.95416681,0,0,1178,True,Eligible for removal
+Size by licensed drivers,bic,2,part_time,1,1432.26528218,9.4107145492e-206,0,1178,True,Eligible for removal
+Size by licensed drivers,bic,2,home_workers,1,25.3610289299,5.49644744881e-07,1.27771516055e-11,1178,True,Eligible for removal
+Size by licensed drivers,bic,2,students,1,4675.46175054,0,0,1178,True,Eligible for removal
+Size by licensed drivers,bic,2,dwelling,2,247.384841639,1.99840906084e-90,8.60328641406e-120,1178,True,Eligible for removal
+Size by licensed drivers,bic,2,weekday,4,18.0610832931,2.08489249314e-14,8.35581172475e-14,1178,True,Eligible for removal
+Size by vehicles,p01,0,size,1,151.481556864,7.77698708754e-33,1.61772071034e-51,1178,False,Prespecified substantive core
+Size by vehicles,p01,0,vehicles,1,593.183818561,1.90712480567e-106,1.09433667442e-186,1178,False,Required by hierarchy: size_by_vehicles
+Size by vehicles,p01,0,drivers,1,748.535304249,5.51975594978e-128,2.14010238842e-215,1178,True,Eligible for removal
+Size by vehicles,p01,0,full_time,1,2787.62135786,0,0,1178,True,Eligible for removal
+Size by vehicles,p01,0,part_time,1,1422.76943327,8.06380099376e-205,0,1178,True,Eligible for removal
+Size by vehicles,p01,0,home_workers,1,24.9368578365,6.81718020886e-07,1.5662893604e-11,1178,True,Eligible for removal
+Size by vehicles,p01,0,students,1,4691.08833049,0,0,1178,True,Eligible for removal
+Size by vehicles,p01,0,dwelling,2,225.328293811,1.37084590263e-83,1.93089752638e-113,1178,True,Eligible for removal
+Size by vehicles,p01,0,weekday,4,18.5001595942,9.32269058852e-15,4.12523645896e-14,1178,True,Eligible for removal
+Size by vehicles,p01,0,region,3,2.93078704035,0.032607383026,0.000664373597271,1178,True,Eligible for removal
+Size by vehicles,p01,0,size_by_vehicles,1,0.0633655001899,0.801297501382,0.721384358355,1178,True,Eligible for removal
+Size by vehicles,p01,1,size,1,157.032068872,6.58073468328e-34,1.25584544676e-55,1178,False,Prespecified substantive core
+Size by vehicles,p01,1,vehicles,1,599.306473463,2.48988603706e-107,1.15175221681e-186,1178,True,Eligible for removal
+Size by vehicles,p01,1,drivers,1,748.877436719,4.97091346829e-128,1.70579436445e-215,1178,True,Eligible for removal
+Size by vehicles,p01,1,full_time,1,2781.04083841,0,0,1178,True,Eligible for removal
+Size by vehicles,p01,1,part_time,1,1426.17267563,3.73076243874e-205,0,1178,True,Eligible for removal
+Size by vehicles,p01,1,home_workers,1,24.9809744193,6.66613013866e-07,1.50036753384e-11,1178,True,Eligible for removal
+Size by vehicles,p01,1,students,1,4690.39649998,0,0,1178,True,Eligible for removal
+Size by vehicles,p01,1,dwelling,2,232.270397385,9.2375134877e-86,1.44086865707e-114,1178,True,Eligible for removal
+Size by vehicles,p01,1,weekday,4,18.4755346617,9.75298846217e-15,4.19804465197e-14,1178,True,Eligible for removal
+Size by vehicles,p01,1,region,3,2.92494724846,0.032865278637,0.000669951561702,1178,True,Eligible for removal
+Size by vehicles,p01,2,size,1,150.677246878,1.11332417481e-32,1.78322398192e-54,1178,False,Prespecified substantive core
+Size by vehicles,p01,2,vehicles,1,661.283433128,4.11403953179e-116,9.84110186496e-197,1178,True,Eligible for removal
+Size by vehicles,p01,2,drivers,1,741.558288189,4.69060061106e-127,1.18828624681e-214,1178,True,Eligible for removal
+Size by vehicles,p01,2,full_time,1,2820.95416681,0,0,1178,True,Eligible for removal
+Size by vehicles,p01,2,part_time,1,1432.26528218,9.4107145492e-206,0,1178,True,Eligible for removal
+Size by vehicles,p01,2,home_workers,1,25.3610289299,5.49644744881e-07,1.27771516055e-11,1178,True,Eligible for removal
+Size by vehicles,p01,2,students,1,4675.46175054,0,0,1178,True,Eligible for removal
+Size by vehicles,p01,2,dwelling,2,247.384841639,1.99840906084e-90,8.60328641406e-120,1178,True,Eligible for removal
+Size by vehicles,p01,2,weekday,4,18.0610832931,2.08489249314e-14,8.35581172475e-14,1178,True,Eligible for removal
+Size by vehicles,aic,0,size,1,151.481556864,7.77698708754e-33,1.61772071034e-51,1178,False,Prespecified substantive core
+Size by vehicles,aic,0,vehicles,1,593.183818561,1.90712480567e-106,1.09433667442e-186,1178,False,Required by hierarchy: size_by_vehicles
+Size by vehicles,aic,0,drivers,1,748.535304249,5.51975594978e-128,2.14010238842e-215,1178,True,Eligible for removal
+Size by vehicles,aic,0,full_time,1,2787.62135786,0,0,1178,True,Eligible for removal
+Size by vehicles,aic,0,part_time,1,1422.76943327,8.06380099376e-205,0,1178,True,Eligible for removal
+Size by vehicles,aic,0,home_workers,1,24.9368578365,6.81718020886e-07,1.5662893604e-11,1178,True,Eligible for removal
+Size by vehicles,aic,0,students,1,4691.08833049,0,0,1178,True,Eligible for removal
+Size by vehicles,aic,0,dwelling,2,225.328293811,1.37084590263e-83,1.93089752638e-113,1178,True,Eligible for removal
+Size by vehicles,aic,0,weekday,4,18.5001595942,9.32269058852e-15,4.12523645896e-14,1178,True,Eligible for removal
+Size by vehicles,aic,0,region,3,2.93078704035,0.032607383026,0.000664373597271,1178,True,Eligible for removal
+Size by vehicles,aic,0,size_by_vehicles,1,0.0633655001899,0.801297501382,0.721384358355,1178,True,Eligible for removal
+Size by vehicles,aic,1,size,1,157.032068872,6.58073468328e-34,1.25584544676e-55,1178,False,Prespecified substantive core
+Size by vehicles,aic,1,vehicles,1,599.306473463,2.48988603706e-107,1.15175221681e-186,1178,True,Eligible for removal
+Size by vehicles,aic,1,drivers,1,748.877436719,4.97091346829e-128,1.70579436445e-215,1178,True,Eligible for removal
+Size by vehicles,aic,1,full_time,1,2781.04083841,0,0,1178,True,Eligible for removal
+Size by vehicles,aic,1,part_time,1,1426.17267563,3.73076243874e-205,0,1178,True,Eligible for removal
+Size by vehicles,aic,1,home_workers,1,24.9809744193,6.66613013866e-07,1.50036753384e-11,1178,True,Eligible for removal
+Size by vehicles,aic,1,students,1,4690.39649998,0,0,1178,True,Eligible for removal
+Size by vehicles,aic,1,dwelling,2,232.270397385,9.2375134877e-86,1.44086865707e-114,1178,True,Eligible for removal
+Size by vehicles,aic,1,weekday,4,18.4755346617,9.75298846217e-15,4.19804465197e-14,1178,True,Eligible for removal
+Size by vehicles,aic,1,region,3,2.92494724846,0.032865278637,0.000669951561702,1178,True,Eligible for removal
+Size by vehicles,bic,0,size,1,151.481556864,7.77698708754e-33,1.61772071034e-51,1178,False,Prespecified substantive core
+Size by vehicles,bic,0,vehicles,1,593.183818561,1.90712480567e-106,1.09433667442e-186,1178,False,Required by hierarchy: size_by_vehicles
+Size by vehicles,bic,0,drivers,1,748.535304249,5.51975594978e-128,2.14010238842e-215,1178,True,Eligible for removal
+Size by vehicles,bic,0,full_time,1,2787.62135786,0,0,1178,True,Eligible for removal
+Size by vehicles,bic,0,part_time,1,1422.76943327,8.06380099376e-205,0,1178,True,Eligible for removal
+Size by vehicles,bic,0,home_workers,1,24.9368578365,6.81718020886e-07,1.5662893604e-11,1178,True,Eligible for removal
+Size by vehicles,bic,0,students,1,4691.08833049,0,0,1178,True,Eligible for removal
+Size by vehicles,bic,0,dwelling,2,225.328293811,1.37084590263e-83,1.93089752638e-113,1178,True,Eligible for removal
+Size by vehicles,bic,0,weekday,4,18.5001595942,9.32269058852e-15,4.12523645896e-14,1178,True,Eligible for removal
+Size by vehicles,bic,0,region,3,2.93078704035,0.032607383026,0.000664373597271,1178,True,Eligible for removal
+Size by vehicles,bic,0,size_by_vehicles,1,0.0633655001899,0.801297501382,0.721384358355,1178,True,Eligible for removal
+Size by vehicles,bic,1,size,1,145.795623969,9.87257996538e-32,1.75466909105e-50,1178,False,Prespecified substantive core
+Size by vehicles,bic,1,vehicles,1,653.394225629,5.19385105688e-115,9.48342648894e-197,1178,False,Required by hierarchy: size_by_vehicles
+Size by vehicles,bic,1,drivers,1,741.268408967,5.12757974002e-127,1.48718407487e-214,1178,True,Eligible for removal
+Size by vehicles,bic,1,full_time,1,2827.74410663,0,0,1178,True,Eligible for removal
+Size by vehicles,bic,1,part_time,1,1428.67678385,2.11725727444e-205,0,1178,True,Eligible for removal
+Size by vehicles,bic,1,home_workers,1,25.3225406825,5.60485740908e-07,1.32907558529e-11,1178,True,Eligible for removal
+Size by vehicles,bic,1,students,1,4674.98462754,0,0,1178,True,Eligible for removal
+Size by vehicles,bic,1,dwelling,2,236.848271582,3.49665692061e-87,1.5679972779e-118,1178,True,Eligible for removal
+Size by vehicles,bic,1,weekday,4,18.0835020737,2.00092102619e-14,8.22298001968e-14,1178,True,Eligible for removal
+Size by vehicles,bic,1,size_by_vehicles,1,0.054333095651,0.815728437572,0.740895280208,1178,True,Eligible for removal
+Size by vehicles,bic,2,size,1,150.677246878,1.11332417481e-32,1.78322398192e-54,1178,False,Prespecified substantive core
+Size by vehicles,bic,2,vehicles,1,661.283433128,4.11403953179e-116,9.84110186496e-197,1178,True,Eligible for removal
+Size by vehicles,bic,2,drivers,1,741.558288189,4.69060061106e-127,1.18828624681e-214,1178,True,Eligible for removal
+Size by vehicles,bic,2,full_time,1,2820.95416681,0,0,1178,True,Eligible for removal
+Size by vehicles,bic,2,part_time,1,1432.26528218,9.4107145492e-206,0,1178,True,Eligible for removal
+Size by vehicles,bic,2,home_workers,1,25.3610289299,5.49644744881e-07,1.27771516055e-11,1178,True,Eligible for removal
+Size by vehicles,bic,2,students,1,4675.46175054,0,0,1178,True,Eligible for removal
+Size by vehicles,bic,2,dwelling,2,247.384841639,1.99840906084e-90,8.60328641406e-120,1178,True,Eligible for removal
+Size by vehicles,bic,2,weekday,4,18.0610832931,2.08489249314e-14,8.35581172475e-14,1178,True,Eligible for removal

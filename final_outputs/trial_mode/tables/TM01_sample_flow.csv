@@ -1,0 +1,9 @@
+﻿stage_or_issue,households
+Raw supplied households,93307
+Vehicles >=10,33
+Dwelling code 9 Unknown,9
+Overlap of the two exclusion reasons,0
+Unique excluded households,42
+Fixed estimation sample for every trial model,93265
+Zero-trip households retained in estimation,10474
+Residential zones represented,1179

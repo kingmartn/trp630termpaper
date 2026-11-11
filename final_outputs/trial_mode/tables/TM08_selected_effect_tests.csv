@@ -1,0 +1,12 @@
+﻿effect,df_effect,clustered_F,p_clustered,p_classical,df_cluster_denominator,protected_or_hierarchy
+size,1,235.128830816,1.59004567665e-48,5.72892268721e-65,1178,Prespecified substantive core
+vehicles,1,1102.77184138,3.29649114325e-171,3.79744926081e-234,1178,Required by hierarchy: vehicles_squared
+drivers,1,603.369125247,6.47383683936e-108,2.42876886864e-175,1178,Eligible for removal
+full_time,1,2796.72868393,0,0,1178,Eligible for removal
+part_time,1,1470.71748944,1.69949048458e-209,0,1178,Eligible for removal
+home_workers,1,27.565718653,1.80018641543e-07,2.00275468921e-12,1178,Eligible for removal
+students,1,4781.81022078,0,0,1178,Eligible for removal
+dwelling,2,177.861614199,3.15933723134e-68,5.0666651989e-86,1178,Eligible for removal
+weekday,4,17.6906433249,4.11329867797e-14,1.80122292271e-13,1178,Eligible for removal
+size_squared,1,17.907837234,2.49866568987e-05,6.70661378469e-13,1178,Eligible for removal
+vehicles_squared,1,148.933786114,2.42496732572e-32,2.47091652078e-49,1178,Eligible for removal

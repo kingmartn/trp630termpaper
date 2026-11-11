@@ -1,0 +1,6 @@
+﻿family,starting_effects,starting_parameters_including_intercept
+Separate employment main effects,size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + region,17
+Total workers main effects,size + vehicles + drivers + workers + home_workers + students + dwelling + weekday + region,16
+Size and vehicle curvature,size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + region + size_squared + vehicles_squared,19
+Size by licensed drivers,size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + region + size_by_drivers,18
+Size by vehicles,size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + region + size_by_vehicles,18

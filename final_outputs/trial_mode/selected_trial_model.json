@@ -1,0 +1,95 @@
+{
+  "status": "Exploratory primary trial; not a validated final model",
+  "family": "Size and vehicle curvature",
+  "selection_rule": "zone-clustered effect p<0.01 backward reduction",
+  "ranking_rule": "lowest working Gaussian OLS BIC among p01 terminal models",
+  "effects": [
+    "size",
+    "vehicles",
+    "drivers",
+    "full_time",
+    "part_time",
+    "home_workers",
+    "students",
+    "dwelling",
+    "weekday",
+    "size_squared",
+    "vehicles_squared"
+  ],
+  "columns": [
+    "Intercept",
+    "size_c",
+    "vehicles_c",
+    "drivers_c",
+    "full_time",
+    "part_time",
+    "home_workers",
+    "students",
+    "dwelling_Apartment",
+    "dwelling_Townhouse",
+    "weekday_Tuesday",
+    "weekday_Wednesday",
+    "weekday_Thursday",
+    "weekday_Friday",
+    "size_c_squared",
+    "vehicles_c_squared"
+  ],
+  "coefficients": {
+    "Intercept": 3.4347128692349287,
+    "size_c": 0.24290340728260598,
+    "vehicles_c": 0.718703294857627,
+    "drivers_c": 0.5368592172512071,
+    "full_time": 0.9881934662184076,
+    "part_time": 1.1861553641261755,
+    "home_workers": -0.2218901934150307,
+    "students": 1.5576238452109246,
+    "dwelling_Apartment": -0.560167721252009,
+    "dwelling_Townhouse": -0.2047667325847687,
+    "weekday_Tuesday": 0.13178943665012502,
+    "weekday_Wednesday": 0.1518836454809286,
+    "weekday_Thursday": 0.15789509559781295,
+    "weekday_Friday": 0.2786816274575371,
+    "size_c_squared": -0.02794806891009071,
+    "vehicles_c_squared": -0.11158480298337461
+  },
+  "centers": {
+    "nperson": 3,
+    "nvehicle": 1,
+    "nlicence": 2
+  },
+  "references": {
+    "dwelling": "House",
+    "weekday": "Monday",
+    "region": "Toronto"
+  },
+  "n": 93265,
+  "n_zones": 1179,
+  "row_id_sha256": "5cfd54ebbf3c1ca85110663baaa5fcad2995df87abc9f6c54185c2dcb8e73882",
+  "input_workbook_sha256": "7bced1105d00a6b468289110a4a4d1684591e9bb74c878a927e3bec979efea90",
+  "exclusions": {
+    "nvehicle_at_least": 10,
+    "dwelling_unknown_code": 9
+  },
+  "estimation": "unweighted OLS",
+  "covariance": "clustered by gta01hhld",
+  "alpha": 0.01,
+  "protected_effects": [
+    "size"
+  ],
+  "metrics": {
+    "n": 93265,
+    "n_zones": 1179,
+    "parameters": 16,
+    "aic": 489548.45725644694,
+    "bic": 489699.5484593666,
+    "r_squared": 0.464649346897987,
+    "adjusted_r_squared": 0.4645632305879297,
+    "rmse_in_sample": 3.3380688275357007,
+    "mae_in_sample": 2.3903096453165786,
+    "mean_prediction_error_pred_minus_obs": -1.2043381297266567e-14,
+    "residual_standard_error": 3.3383551942013185,
+    "negative_predictions_n": 0,
+    "minimum_prediction": 0.3729395254339293,
+    "maximum_prediction": 21.681559362239014
+  }
+}
