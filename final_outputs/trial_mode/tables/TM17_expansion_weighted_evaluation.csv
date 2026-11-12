@@ -1,3 +1,0 @@
-﻿evaluation,observed_mean,predicted_mean,MAE,RMSE,mean_prediction_error
-Unweighted households,5.64293143194,5.64293143194,2.39030964532,3.33806882754,-1.20433812973e-14
-Expansion-weighted households; coefficients still unweighted OLS,5.63985638813,5.64491104256,2.38698747191,3.3334289854,0.00505465442707

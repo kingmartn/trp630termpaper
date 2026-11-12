@@ -1,7 +1,0 @@
-﻿vehicle_band,households,min_vehicles,max_vehicles,mean_residents,median_residents,mean_licensed_drivers,median_licensed_drivers,mean_trips,median_trips,min_trips,max_trips,zero_trip_households,vehicles_exceed_residents_n,vehicles_exceed_drivers_n,percent_full_dataset
-0-4,92907,0,4,2.734950003767208,2.0,1.7223675288191418,2.0,5.624592334269754,4.0,0,55,10473,2018,4449,99.57130762
-5-6,333,5,6,4.342342342342342,4.0,3.7087087087087087,4.0,10.35135135135135,10.0,0,44,3,189,238,0.3568864072
-7-9,34,7,9,3.588235294117647,3.5,3.0,3.0,9.323529411764707,8.5,0,22,2,32,34,0.03643885239
-10-15,20,10,15,3.2,3.0,2.2,2.0,6.3,6.0,0,17,1,20,20,0.02143461905
-16 or more,13,21,99,3.3076923076923075,3.0,2.230769230769231,2.0,7.769230769230769,7.0,0,23,1,13,13,0.01393250238
-Missing vehicle measurement,0,,,,,,,,,,,,,,

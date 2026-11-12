@@ -1,8 +1,0 @@
-Flag,Households,Definition,Decision
-vehicle_99_review,1,"Raw nvehicle equals 99; documented numeric value retained, flagged only for leverage/sensitivity review",Retained as numeric 99 under the source guide; high-count review only; no missing-value exclusion
-unknown_dwelling,9,Raw dwelltype equals 9,Retained as Unknown in full EDA; model handling undecided
-unknown_advance_letter,576,Raw rec-mail equals code 9; no eligibility exclusion,Retained; survey-process field is not a substantive predictor
-high_vehicle,33,"Known vehicle count at least 10; flag, not automatic deletion",Retained in main samples; flagged for a possible later sensitivity check
-zero_trip,10480,Recorded trips equal zero; retain,Retained; no exclusion based on zero trips
-home_double_count_exceeds_size,3702,workers + nemphome exceeds nperson; informational,Retained; do not add home workers to full- and part-time totals
-workers_students_exceed_size,6533,workers + nstudent exceeds nperson; overlapping statuses,Retained; employment and student statuses may overlap

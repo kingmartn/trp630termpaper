@@ -1,7 +1,0 @@
-﻿scenario,available_n,unavailable_n,columns_including_intercept,rank,full_rank,standardized_condition_number,max_column_VIF,status
-Size and licensed drivers,93307,0,3,3,True,1.996236147,1.558975595,Candidate design only; no outcome model fitted
-Size and vehicles,93307,0,3,3,True,1.534254327,1.194689166,Candidate design only; no outcome model fitted
-"Size, drivers and vehicles",93307,0,4,4,True,2.663215453,2.239612383,Candidate design only; no outcome model fitted
-Separate employment counts + controls,93298,9,17,17,True,3.98708228,3.159312348,Candidate design only; no outcome model fitted
-Total workers alternative + controls,93298,9,16,16,True,3.921233652,3.101782278,Candidate design only; no outcome model fitted
-Invalid: workers and both employment components,93307,0,8,7,False,inf,,Do not fit: exact linear dependence

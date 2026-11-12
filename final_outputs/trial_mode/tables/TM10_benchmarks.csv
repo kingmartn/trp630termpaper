@@ -1,4 +1,0 @@
-﻿model,effects,n,n_zones,parameters,aic,bic,r_squared,adjusted_r_squared,rmse_in_sample,mae_in_sample,mean_prediction_error_pred_minus_obs,residual_standard_error,negative_predictions_n,minimum_prediction,maximum_prediction
-Intercept-only mean,,93265,1179,1,547793.536886,547802.980086,3.44169137634e-15,3.44169137634e-15,4.56221889353,3.43870696502,7.15386600783e-14,4.56224335209,0,5.64293143194,5.64293143194
-Size and licensed drivers,size + drivers,93265,1179,3,504418.91517,504447.244771,0.371934912267,0.371921443435,3.61558391131,2.58465064651,-7.85013922615e-15,3.61564206289,0,1.19877859749,32.1894575487
-Primary trial model,size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + size_squared + vehicles_squared,93265,1179,16,489548.457256,489699.548459,0.464649346898,0.464563230588,3.33806882754,2.39030964532,-1.20433812973e-14,3.3383551942,0,0.372939525434,21.6815593622

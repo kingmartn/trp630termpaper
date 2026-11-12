@@ -1,3 +1,0 @@
-﻿evaluation,zones,MAE,RMSE,mean_prediction_error_pred_minus_obs,status
-Sample zone totals,1179,30.5358779413,44.9426333445,-9.53850889518e-13,In-sample zone agreement
-Expansion-weighted zone totals,1179,590.696032364,875.298760397,7.7505199821,In-sample zone agreement

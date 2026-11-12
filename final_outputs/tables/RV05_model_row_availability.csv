@@ -1,7 +1,0 @@
-﻿scenario,households_available,households_not_available,actual_rows_removed_from_EDA,status
-Size and licensed drivers; no vehicles or dwelling required,93307,0,0,Illustrative model availability; no final exclusions
-"Known vehicles required, dwelling not required",93307,0,0,Illustrative model availability; no final exclusions
-"Known dwelling required, vehicles not required",93298,9,0,Illustrative model availability; no final exclusions
-Known vehicles and dwelling required,93298,9,0,Illustrative model availability; no final exclusions
-Known vehicles/dwelling; exclude vehicles >=10 (sensitivity only),93265,42,0,Illustrative model availability; no final exclusions
-Known vehicles/dwelling; exclude vehicles >=7 (exploratory sensitivity only),93231,76,0,Illustrative model availability; no final exclusions

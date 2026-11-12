@@ -1,3 +1,0 @@
-﻿group,n,mean_trips,sd_trips,median_trips,zero_n,weight_sum,zero_pct,weighted_mean_trips,weighted_zero_pct,source_n,groupable_n,excluded_missing_group_n,weighted_minus_unweighted
-Full dataset,93307,5.643252918,4.56247928,4,10480,1808648.44,11.23174038,5.640092494,11.15884577,93307,93307,0,-0.00316042419
-Recorded vehicles below 10 (sensitivity only),93274,5.64281579,4.562259593,4,10478,1807991.14,11.23356991,5.63972756,11.16073002,93274,93274,0,-0.00308823031
