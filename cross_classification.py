@@ -157,8 +157,7 @@ fig, ax = plt.subplots(figsize=(8.5, 5.8))
 image = ax.imshow(visible_rates, cmap=WARM_HEAT, aspect="auto")
 ax.set(xticks=range(4), xticklabels=["0", "1", "2", "3+"],
        yticks=range(5), yticklabels=["1", "2", "3", "4", "5+"],
-       xlabel="Licensed drivers", ylabel="Household persons",
-       title="Training trip rates by household size and licensed drivers")
+       xlabel="Number of licensed drivers", ylabel="Household size")
 for row in range(5):
     for col in range(4):
         n = int(support.iat[row, col])
@@ -279,13 +278,14 @@ group_performance = pd.DataFrame(group_rows)
 fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
 axes[0].hexbin(primary_pred, actual, gridsize=45, mincnt=1, bins="log", cmap=WARM_HEAT)
 axes[0].plot([0, 55], [0, 55], "--", color=BLUE)
-axes[0].set(xlabel="Cross-classification predicted trips", ylabel="Observed trips",
-            title="Held-out households")
+axes[0].set(xlabel="Predicted weekday household trips", ylabel="Observed weekday household trips")
 axes[1].scatter(zone["actual_sample"], zone["cross_sample"], s=12, alpha=.4, color=BLUE)
 limit = max(zone["actual_sample"].max(), zone["cross_sample"].max())
 axes[1].plot([0, limit], [0, limit], "--", color=GOLD)
-axes[1].set(xlabel="Observed sample trips", ylabel="Predicted sample trips",
-            title="Held-out traffic-zone totals")
+axes[1].set(xlabel="Observed household trips per zone", ylabel="Predicted household trips per zone")
+for letter, ax in zip("ab", axes):
+    ax.text(0, 1.03, f"({letter})", transform=ax.transAxes,
+            ha="left", va="bottom", fontweight="bold")
 fig.tight_layout()
 fig.savefig(FIGURES / "CC_01_heldout_agreement.png", dpi=220)
 plt.close(fig)
