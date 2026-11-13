@@ -11,7 +11,7 @@ from matplotlib.colors import LinearSegmentedColormap
 from cycler import cycler
 import numpy as np
 import pandas as pd
-from split_policy import assign_household_split, SPLIT_SEED, TEST_FRACTION
+from split_policy import assign_household_split
 
 
 ROOT = Path(__file__).resolve().parent
@@ -20,9 +20,7 @@ TEST_BOOK = ROOT / "intermediaries" / "EDA_heldout_test.xlsx"
 REGRESSION_BOOK = ROOT / "final_outputs" / "MLR_regression" / "MLR_regression_results.xlsx"
 OUTPUT_DIR = ROOT / "final_outputs" / "cross_classification"
 OUTPUT_BOOK = OUTPUT_DIR / "cross_classification_results.xlsx"
-REPORT = OUTPUT_DIR / "cross_classification_results.md"
 COMPARISON_BOOK = ROOT / "final_outputs" / "model_comparison.xlsx"
-COMPARISON_REPORT = ROOT / "final_outputs" / "model_comparison.md"
 FIGURES = OUTPUT_DIR / "figures"
 FIGURES.mkdir(parents=True, exist_ok=True)
 BLUE, GOLD, TEAL, CORAL, INK = "#2673B8", "#E9A23B", "#2E9B8A", "#D96B55", "#253746"
@@ -146,7 +144,6 @@ train = pd.read_excel(TRAIN_BOOK, sheet_name="Train")
 assert train["hnum"].is_unique
 assert set(train["hnum"]) <= set(split.loc[split["split"].eq("train"), "hnum"])
 assert train["nvehicle"].lt(10).all() and train["dwelltype"].ne(9).all()
-train_n = len(train)
 
 # All specifications and fallback rates are fixed before opening held-out records.
 model_specs = [PRIMARY] + ALTERNATIVES
@@ -301,14 +298,6 @@ derived_rows = []
 def derive(quantity, value, unit, reference, sample, source):
     derived_rows.append(dict(quantity=quantity, value=value, unit=unit,
         reference_or_denominator=reference, sample=sample, source=source))
-def derived_markdown(frame):
-    lines = ['| Quantity | Value | Unit | Reference / denominator | Sample | Source / formula |',
-             '| --- | ---: | --- | --- | --- | --- |']
-    for r in frame.itertuples(index=False):
-        value = f'{r.value:.7g}' if isinstance(r.value, (float, int, np.number)) else str(r.value)
-        lines.append(f'| {r.quantity} | {value} | {r.unit} | {r.reference_or_denominator} | {r.sample} | {r.source} |')
-    return '\n'.join(lines)
-
 b = benchmark.set_index('model')
 base=b.loc['Training mean']; cc=b.loc['Cross-classification']; selected=b.loc['Multiple linear regression']
 two=b.loc['Regression (size and drivers)']; simple=b.loc['Simple four-predictor regression']
@@ -371,7 +360,6 @@ for r in boundary_sensitivity.itertuples():
     for metric in ['MAE','RMSE']:
         derive(f'{r.model}: {metric} minus primary boundaries',getattr(r,metric+'_minus_primary'),'trips',PRIMARY[0],'test','alternative metric - primary metric')
 derived_comparison=pd.DataFrame(derived_rows)
-print('Derived quantities');print(derived_comparison.to_string(index=False))
 
 sheets = {
     "ModelComparison": benchmark,
@@ -398,60 +386,5 @@ write_workbook(COMPARISON_BOOK, {
     "ZoneSummary": zone_summary,
     "ZoneComparison": zone,
 })
-cross = benchmark.set_index("model").loc["Cross-classification"]
-same = benchmark.set_index("model").loc["Regression (size and drivers)"]
-linear = benchmark.set_index("model").loc["Multiple linear regression"]
-group_mae_table = "\n".join(
-    f"| {row.grouping} | {row.level} | {row.n:,} | {row.cross_class_MAE:.3f} | "
-    f"{row.same_input_regression_MAE:.3f} | {row.selected_regression_MAE:.3f} |"
-    for row in group_performance.itertuples())
-COMPARISON_REPORT.write_text(f"""# Held-out model comparison
-
-All models use the same {len(test):,} eligible test households. Household IDs are assigned with NumPy PCG64 seed {SPLIT_SEED}, with {TEST_FRACTION:.0%} reserved for test before exclusions. The regenerated assignment matches the EDA split exactly. The regression specification was selected using training data; cross-classification category boundaries were specified before evaluation. The detailed calculations are in [model_comparison.xlsx](model_comparison.xlsx).
-
-| Method | Test MAE | Test RMSE | Mean error (predicted − observed) |
-| --- | ---: | ---: | ---: |
-""" + "\n".join(
-    f"| {row.model} | {row.MAE:.4f} | {row.RMSE:.4f} | {row.mean_error_pred_minus_obs:.4f} |"
-    for row in benchmark.itertuples()) + f"""
-
-Cross-classification and the size-and-drivers regression use the same two household characteristics. Cross-classification groups the upper counts, while regression retains their exact values. Their test RMSE values are {cross['RMSE']:.4f} and {same['RMSE']:.4f}, respectively. The selected regression uses additional household characteristics; its RMSE is {linear['RMSE']:.4f}. The comparison with cross-classification therefore reflects both model form and available information.
-
-The table below compares household MAE within identical size and driver groups. The workbook also contains RMSE and signed mean error for every group and model.
-
-| Group | Level | Households | Cross-classification MAE | Size-and-drivers regression MAE | Selected regression MAE |
-| --- | --- | ---: | ---: | ---: | ---: |
-{group_mae_table}
-
-## Derived quantities
-
-{derived_markdown(derived_comparison)}
-
-Zone totals use the same test records and show sample and expansion-weighted results separately. See the [regression report](MLR_regression/MLR_regression_results.md) and [cross-classification report](cross_classification/cross_classification_results.md) for model-specific details. These are predictive results, not causal effects.
-""", encoding="utf-8")
-
-fallback_n = int(primary_lookup["rule"].eq("Size-band fallback").sum())
-REPORT.write_text(f"""# Cross-classification: held-out evaluation
-
-The primary model uses household size 1/2/3/4/5+ and licensed drivers 0/1/2/3+. Each supported cell uses its unweighted training mean trip rate. Cells with fewer than {MIN_CELL_N} training households use the training mean for that size band; {fallback_n:,} held-out households used this fallback. The model and fallback rule were fixed before the held-out workbook was opened.
-
-Household size represents the number of residents who may participate in daily activities; licensed-driver count represents the household's capacity for independent motorized travel. Crossing them allows driver availability to have different trip rates at different household sizes. The 5+ and 3+ top categories pool sparse tails, and the reported alternative boundaries test whether those choices matter. Children under 11 contribute to household size but their trips are not recorded; these rates describe associations, not causal effects. The [training cell-rate figure](figures/CC_02_training_cell_rates.png) shows each observed cell's rate and supporting household count. Structurally impossible cells are blank and do not receive fallback rates.
-
-The common training set has {train_n:,} households and the reserved test set has {len(test):,}. The split was regenerated from source household IDs with seed {SPLIT_SEED}, reserving {TEST_FRACTION:.0%} before exclusions. The source and exclusion rules match the regression analysis. The [results workbook](cross_classification_results.xlsx) contains cell rates, support, boundary sensitivity, household and zone comparisons, and test predictions. The side-by-side [model comparison](../model_comparison.md) is in the root final-output folder.
-
-| Method | Test MAE | Test RMSE | Mean error (predicted − observed) |
-| --- | ---: | ---: | ---: |
-| Cross-classification | {cross['MAE']:.4f} | {cross['RMSE']:.4f} | {cross['mean_error_pred_minus_obs']:.4f} |
-| Regression (size and drivers) | {same['MAE']:.4f} | {same['RMSE']:.4f} | {same['mean_error_pred_minus_obs']:.4f} |
-| Multiple linear regression | {linear['MAE']:.4f} | {linear['RMSE']:.4f} | {linear['mean_error_pred_minus_obs']:.4f} |
-
-The first two model rows use only household size and licensed-driver count; cross-classification pools their upper categories, while regression uses exact counts. The selected regression effects are {regression_benchmarks.set_index('model').loc['Selected alternative model', 'effects']}. The [common-group comparison](../model_comparison.md) reports household-size and driver-band errors for both methods. Sample and expansion-weighted traffic-zone totals are evaluated on the same held-out households. `expf` is applied to observed and predicted trips alike. The boundary alternatives are reported as sensitivity checks; the test set was not used to select the primary boundaries. The weighted zone sums describe the evaluation records only; they are not full-population totals because no inverse test-selection adjustment is applied. These are predictive comparisons, not causal claims.
-""", encoding="utf-8")
 print(benchmark.round(4).to_string(index=False))
-print(f"Saved {OUTPUT_BOOK} and {REPORT}")
-
-
-
-
-with REPORT.open("a", encoding="utf-8") as report_file:
-    report_file.write("\n## Derived quantities\n\n" + derived_markdown(derived_comparison) + "\n")
+print(f"Saved {OUTPUT_BOOK} and {COMPARISON_BOOK}")
