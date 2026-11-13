@@ -8,7 +8,7 @@ Run the analysis from this project folder with the `geo_env` Python environment:
 source /home/mst_lab/geo_env/bin/activate
 ```
 
-1. Run `Household_EDA_updated.ipynb` from top to bottom. It checks the source workbook, regenerates the household split, and writes 25 EDA tables and 16 figures under `final_outputs/EDA/` plus four paper figures under `paper/figures/`. Modeling summaries use eligible training households; pre-exclusion vehicle reviews use training-assigned households. Held-out records go to `intermediaries/EDA_heldout_test.xlsx` and are absent from EDA summaries.
+1. Run `Household_EDA_updated.ipynb` from top to bottom. It checks the source workbook, regenerates the household split, and writes 25 EDA tables and 15 figures under `final_outputs/EDA/` plus four paper figures under `paper/figures/`. Modeling summaries use eligible training households; pre-exclusion vehicle reviews use training-assigned households. Held-out records go to `intermediaries/EDA_heldout_test.xlsx` and are absent from EDA summaries.
 2. Run `MLR_regression.ipynb` from top to bottom. It fits the prespecified simple regression with household persons, vehicles, full-time workers, and students. It then searches alternative linear-regression specifications using training households and evaluates the selected model on the reserved test households. The separate `final_outputs/MLR_regression/feature_rationale.md` explains the transportation reason and interpretation limit for every candidate effect.
 3. Run `python cross_classification.py`. The top-level script fits trip-rate cells on training households, evaluates on the same test households, and writes the side-by-side comparison workbook.
 
