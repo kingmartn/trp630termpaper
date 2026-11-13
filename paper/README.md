@@ -14,7 +14,7 @@ All reported EDA statistics were checked against the current training-only `fina
 
 `methods_preview.tex` is a standalone wrapper. Compile either preview from `paper/` with `pdflatex <name>.tex`, `bibtex <name>`, then `pdflatex <name>.tex` twice more. The compiled previews are `methods_preview.pdf` and `eda_preview.pdf`. The verified references used in the two sections are in `references.bib`; merge these entries into the main paper's bibliography when inserting the sections.
 
-The text was checked against the assignment transcription, both current notebooks, `split_policy.py`, `cross_classification.py`, and the generated workbooks. It describes 65,287 training and 27,978 test households, the four-variable starting regression, the 2,080-model search, cross-classification, and the actual error and weighting conventions. Estimated coefficients and predictive scores belong in Results and are available in `final_outputs`.
+The text was checked against the assignment transcription, both current notebooks, `split_policy.py`, `cross_classification.py`, and the generated workbooks. It describes 65,287 training and 27,978 test households, the four-variable starting regression, the 1,040-model search, cross-classification, and the actual error and weighting conventions. Estimated coefficients and predictive scores belong in Results and are available in `final_outputs`.
 
 The draft describes the actual internal validation scope, including the shared-zone split and earlier exploration of this dataset. The survey definitions come from `inputs/dataguide2006_v1.pdf`.
 

@@ -15,7 +15,6 @@ The simple starting model uses household persons, vehicles, full-time workers, a
 | home_workers | nemphome | Working at home may replace commuting yet change nearby nonwork travel. | Already included among employed people; its coefficient is conditional, not total. |
 | students | nstudent | School and education participation creates scheduled activity and household travel. | Students aged 6–10 are counted, while their trips are not recorded in the outcome. |
 | dwelling | dwelltype | Housing form can proxy density, parking, and local access conditions. | Categorical proxy; not a measured land-use or causal effect. |
-| weekday | tripday | Daily schedules and activity patterns can vary from Monday to Friday. | Survey weekday is categorical and is not a household attribute. |
 | region | gta01hhld ranges | Broad location may proxy differences in land use, transit access, and travel opportunities. | Four coarse regions derived from zone ID; exact zone ID is not a predictor. |
 | size_by_drivers | (nperson - 3) × (nlicence - 2) | Driver availability may matter differently in small and large households. | Interaction requires both main effects and is not causal. |
 | size_by_vehicles | (nperson - 3) × (nvehicle - 1) | The usefulness of vehicles may depend on how many residents share them. | Interaction requires both main effects and is not causal. |
@@ -29,3 +28,5 @@ The fixed reference values are three persons, one vehicle, and two licensed driv
 An interaction allows the vehicle or driver association to depend on household size. It does not force households without cars to make fewer total trips: walking and transit remain possible, and the response includes all recorded trips. The estimated signs and conditional predictions determine what this dataset supports.
 
 The squared terms were removed after the first evaluation because their parabolic form made predicted trips fall at high vehicle counts and produced negative predictions. This was a specification revision after test results had been seen; subsequent test scores describe internal validation. [TCRP Report 128, pp. 44–45](https://www.trb.org/publications/tcrp/tcrp_rpt_128.pdf) illustrates a quadratic relationship between transit-oriented housing trip rates and station distance. Its predictor and observational unit differ from this household analysis, so it does not validate our former household-size or vehicle squares.
+
+Survey weekday was removed from the candidate effects after the earlier evaluation to simplify the specification. It remains a descriptive survey field.

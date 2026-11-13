@@ -37,20 +37,19 @@ The starting specification was
 \end{equation}
 Persons, workers, and students represent potential participation in daily activities, while vehicles represent access to motorized travel. The coefficients describe conditional associations within the observed households.
 
-The candidate set extended the starting model to licensed drivers, alternative employment measures, dwelling type, survey weekday, region, and two interactions. Driver count indicates capacity for independent motorized travel; home working may change commuting and other travel. Dwelling type and region summarize residential context, while weekday allows for differences in daily schedules. Interactions let the driver and vehicle associations vary with household size.
+The candidate set extended the starting model to licensed drivers, alternative employment measures, dwelling type, region, and two interactions. Driver count indicates capacity for independent motorized travel; home working may change commuting and other travel. Dwelling type and region summarize residential context. Interactions let the driver and vehicle associations vary with household size.
 
 The searched effects were selected from the following encompassing specification:
 \begin{align}
  y_i={}&\beta_0+\beta_P P_{ci}+\beta_V V_{ci}+\beta_L L_{ci}
        +\beta_F F_i+\beta_Q Q_i+\beta_H H_i+\beta_S S_i \notag\\
       &+\boldsymbol{\gamma}^{\mathsf T}\mathbf d_i
-       +\boldsymbol{\delta}^{\mathsf T}\mathbf w_i
        +\boldsymbol{\eta}^{\mathsf T}\mathbf r_i \notag\\
       &+\beta_{PL}P_{ci}L_{ci}+\beta_{PV}P_{ci}V_{ci}
        +\varepsilon_i.
  \label{eq:alternative-model}
 \end{align}
-Here $\mathbf d_i$, $\mathbf w_i$, and $\mathbf r_i$ contain indicator variables for dwelling type, weekday, and region. Their reference categories were House, Monday, and Toronto. The other regions were Durham, York, and Peel, assigned from residential zone ranges. The search treated total workers, $F_i+Q_i$, as a substitute for the separate employment counts, avoiding redundant effects. It used the region categories to summarize location, while household identifiers, exact zone identifiers, survey administration fields, and the expansion factor remained outside the predictor set.
+Here $\mathbf d_i$ and $\mathbf r_i$ contain indicator variables for dwelling type and region. Their reference categories were House and Toronto. The other regions were Durham, York, and Peel, assigned from residential zone ranges. The search treated total workers, $F_i+Q_i$, as a substitute for the separate employment counts, avoiding redundant effects. It used the region categories to summarize location, while household identifiers, exact zone identifiers, survey administration fields, and the expansion factor remained outside the predictor set.
 
 \subsubsection{Estimation and specification search}
 All coefficients were estimated by unweighted ordinary least squares on the training households:
@@ -62,7 +61,7 @@ All coefficients were estimated by unweighted ordinary least squares on the trai
 \end{equation}
 where $\mathcal T$ denotes the training set and $\mathbf x_i$ includes the intercept. This gives each sampled household equal weight in fitting. The same training observations were used for every candidate model.
 
-The search evaluated 2,080 valid effect subsets, including the intercept-only specification; household size was optional. Categorical variables entered as whole factors, and interactions required their supporting main effects. Candidates were scored using working Gaussian OLS likelihoods:
+The search evaluated 1,040 valid effect subsets, including the intercept-only specification; household size was optional. Categorical variables entered as whole factors, and interactions required their supporting main effects. Candidates were scored using working Gaussian OLS likelihoods:
 \begin{equation}
  \mathrm{AIC}=-2\widehat\ell+2p,
  \qquad
@@ -71,7 +70,7 @@ The search evaluated 2,080 valid effect subsets, including the intercept-only sp
 \end{equation}
 where $n_{\mathrm{tr}}=|\mathcal T|$ and $\widehat\ell$ is the maximized working log-likelihood. The penalty counts the regression coefficients, including the intercept, in $p$; a common variance-parameter penalty leaves the ranking unchanged. The working Gaussian likelihood provided a comparison rule, while the observed trip-count distribution informed the residual and prediction checks.
 
-Models were examined in ascending BIC order. The selected alternative was the first model for which every removable whole effect had a zone-clustered Wald test $p$-value below 0.01. Only main effects required by retained interactions were protected from removal. The AIC leaders and the best additive specification were retained for comparison. The squared terms were removed after the first evaluation because their parabolic form made predictions fall at high vehicle counts and produced negative predictions. The revised search used training data; its test results constitute internal validation after this specification revision.
+Models were examined in ascending BIC order. The selected alternative was the first model for which every removable whole effect had a zone-clustered Wald test $p$-value below 0.01. Only main effects required by retained interactions were protected from removal. The AIC leaders and the best additive specification were retained for comparison. The squared terms were removed after the first evaluation because their parabolic form made predictions fall at high vehicle counts and produced negative predictions. Survey weekday was subsequently removed from the candidate effects to simplify the specification. The revised search used training data; its test results constitute internal validation after this specification revision.
 
 Coefficient uncertainty was estimated using a sandwich covariance clustered by residential traffic zone, with the finite-sample correction
 $G/(G-1)\,(n_{\mathrm{tr}}-1)/(n_{\mathrm{tr}}-p)$, where $G=1,158$ training zones. Coefficient intervals used a $t$ reference distribution with $G-1$ degrees of freedom; whole-factor tests used the corresponding clustered Wald $F$ statistic. This permits correlated errors within zones and unequal error variances, while retaining the OLS coefficient estimates. The reported 99\% intervals and tests for the selected alternative are exploratory because they do not adjust for searching among specifications.

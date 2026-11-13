@@ -134,6 +134,12 @@ source_ids = pd.read_excel(ROOT / "inputs" / "households.xlsx",
                            sheet_name="2006-hhld", usecols="B", engine="openpyxl")["hnum"]
 split = assign_household_split(source_ids)
 saved_split = pd.read_excel(TRAIN_BOOK, sheet_name="Split")
+eda_numpy = str(pd.read_excel(TRAIN_BOOK, sheet_name="SplitPolicy").iloc[0]["numpy_version"])
+mlr_numpy = str(pd.read_excel(REGRESSION_BOOK, sheet_name="MLR00_environment")
+                .set_index("package").loc["numpy", "version"])
+if not (eda_numpy == mlr_numpy == np.__version__):
+    raise RuntimeError(f"NumPy versions differ: EDA={eda_numpy}, regression={mlr_numpy}, "
+                       f"cross-classification={np.__version__}. Rerun all stages with the same interpreter.")
 pd.testing.assert_frame_equal(split, saved_split[["hnum", "split"]], check_dtype=False)
 del source_ids
 train = pd.read_excel(TRAIN_BOOK, sheet_name="Train")

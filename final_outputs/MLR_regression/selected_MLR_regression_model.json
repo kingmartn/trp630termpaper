@@ -11,8 +11,7 @@
     "part_time",
     "home_workers",
     "students",
-    "dwelling",
-    "weekday"
+    "dwelling"
   ],
   "columns": [
     "Intercept",
@@ -24,27 +23,19 @@
     "home_workers",
     "students",
     "dwelling_Apartment",
-    "dwelling_Townhouse",
-    "weekday_Tuesday",
-    "weekday_Wednesday",
-    "weekday_Thursday",
-    "weekday_Friday"
+    "dwelling_Townhouse"
   ],
   "coefficients": {
-    "Intercept": 3.38627749374016,
-    "size_c": 0.21418058525928213,
-    "vehicles_c": 0.5186691872517107,
-    "drivers_c": 0.600431373211865,
-    "full_time": 0.9889744157713707,
-    "part_time": 1.1383785911799025,
-    "home_workers": -0.17641052739378482,
-    "students": 1.5634645378817644,
-    "dwelling_Apartment": -0.6392044874090875,
-    "dwelling_Townhouse": -0.20849585388516273,
-    "weekday_Tuesday": 0.11539494176631122,
-    "weekday_Wednesday": 0.13771255763909204,
-    "weekday_Thursday": 0.16043714346938037,
-    "weekday_Friday": 0.27747741603663306
+    "Intercept": 3.5273414893271138,
+    "size_c": 0.2138497442743267,
+    "vehicles_c": 0.51965669175127,
+    "drivers_c": 0.5995042770810467,
+    "full_time": 0.9914363011337702,
+    "part_time": 1.1403078295375237,
+    "home_workers": -0.17730187977313094,
+    "students": 1.5638964167391762,
+    "dwelling_Apartment": -0.6383662548812625,
+    "dwelling_Townhouse": -0.20557058018825738
   },
   "centers": {
     "nperson": 3,
@@ -53,7 +44,6 @@
   },
   "references": {
     "dwelling": "House",
-    "weekday": "Monday",
     "region": "Toronto"
   },
   "split_seed": 42,
@@ -71,30 +61,33 @@
   },
   "estimation": "unweighted OLS",
   "covariance": "clustered by gta01hhld",
+  "python_executable": "/home/mst_lab/geo_env/bin/python",
+  "python_version": "3.13.13",
+  "numpy_version": "2.4.6",
   "alpha": 0.01,
   "protected_effects": [],
   "train_metrics": {
     "n": 65287,
     "n_zones": 1158,
-    "parameters": 14,
-    "aic": 342498.3055162071,
-    "bic": 342625.51719120704,
-    "r_squared": 0.4631485497104756,
-    "adjusted_r_squared": 0.46304162848954555,
-    "rmse_in_sample": 3.332983116858785,
-    "mae_in_sample": 2.391626125462517,
-    "mean_prediction_error_pred_minus_obs": 4.12871616459558e-15,
-    "residual_standard_error": 3.333340533109428,
+    "parameters": 10,
+    "aic": 342537.15115110134,
+    "bic": 342628.0166332442,
+    "r_squared": 0.4627632023691408,
+    "adjusted_r_squared": 0.4626891313919409,
+    "rmse_in_sample": 3.334179095550688,
+    "mae_in_sample": 2.3933830463794887,
+    "mean_prediction_error_pred_minus_obs": 5.910106563744157e-15,
+    "residual_standard_error": 3.3344344727441744,
     "negative_predictions_n": 0,
-    "minimum_prediction": 0.5991799021370677,
-    "maximum_prediction": 22.858894534957628
+    "minimum_prediction": 0.7426104999838345,
+    "maximum_prediction": 22.875315041599013
   },
   "test_metrics": {
-    "test_rmse": 3.3682676258279187,
-    "test_mae": 2.410151917896071,
-    "test_mean_prediction_error": 0.017567767311899487,
+    "test_rmse": 3.3694693633908006,
+    "test_mae": 2.4117417518495787,
+    "test_mean_prediction_error": 0.018602114133469856,
     "test_negative_predictions": 0
   },
-  "candidate_count": 2080,
+  "candidate_count": 1040,
   "selected_bic_rank": 1
 }
