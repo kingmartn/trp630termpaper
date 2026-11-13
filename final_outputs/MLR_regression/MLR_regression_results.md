@@ -2,7 +2,7 @@
 
 ## Sample and split
 
-This notebook regenerates the common split from sorted source household IDs with NumPy PCG64 seed 42 and 30% assigned to test before exclusions. EDA independently uses the same rule. It applies the previously chosen vehicle >=10 and unknown-dwelling exclusions to both partitions. The eligible sample is 93,265 households: 65,287 training and 27,978 reserved test. Zero-trip households are retained. The source workbook remains unchanged.
+This notebook regenerates the common split from sorted source household IDs with NumPy PCG64 seed 42 and 30% assigned to test before exclusions. It verifies exact agreement with the split saved by EDA. It applies the previously chosen vehicle >=10 and unknown-dwelling exclusions to both partitions. The eligible sample is 93,265 households: 65,287 training and 27,978 reserved test. Zero-trip households are retained. The source workbook remains unchanged.
 
 ## Simple starting specification
 
@@ -24,17 +24,17 @@ The transportation basis and interpretation limits for all candidate effects are
 
 ## Model search
 
-The declared effect space contains household size, vehicles, licensed drivers, separate or total employment counts, home workers, students, dwelling type, weekday, region, optional size and vehicle squares, and optional size-by-driver and size-by-vehicle interactions. Household size is required. Categorical levels move as whole factors, workers cannot accompany separate employment counts, and hierarchy is enforced. All 4,800 valid effect subsets were scored on training data by Gaussian OLS AIC and BIC. Squared terms and interactions are optional predictors in a model that remains linear in coefficients.
+The declared effect space contains household size, vehicles, licensed drivers, separate or total employment counts, home workers, students, dwelling type, weekday, region, optional size-by-driver and size-by-vehicle interactions. Every main effect, including household size, is optional. Categorical levels move as whole factors, workers cannot accompany separate employment counts, and hierarchy is enforced. All 2,080 valid effect subsets were scored on training data by Gaussian OLS AIC and BIC. Interactions are optional predictors in a model that remains linear in coefficients. The squared terms were removed after the first evaluation because their parabolic form made predicted trips fall at high vehicle counts and produced negative predictions.
 
 The primary choice is the lowest-BIC valid subset whose removable whole effects have zone-clustered p<0.01. It has BIC rank 1 among all scored models. 1 BIC-ranked model(s) required clustered screening. AIC/BIC are working unweighted Gaussian criteria. The 99% clustered intervals below are exploratory after selection, and none is claimed to have selection-adjusted coverage.
 
 ## Selected equation and performance
 
-Retained effects: size, vehicles, drivers, full_time, part_time, home_workers, students, dwelling, weekday, region, size_squared, vehicles_squared, size_by_drivers, size_by_vehicles.
+Retained effects: size, vehicles, drivers, full_time, part_time, home_workers, students, dwelling, weekday.
 
-Predicted trips = 3.48625 +0.25510 * size_c +0.83947 * vehicles_c +0.48274 * drivers_c +0.97595 * full_time +1.13933 * part_time -0.17504 * home_workers +1.56276 * students -0.54525 * dwelling_Apartment -0.18491 * dwelling_Townhouse +0.11562 * weekday_Tuesday +0.13503 * weekday_Wednesday +0.17031 * weekday_Thursday +0.28278 * weekday_Friday +0.14866 * region_Durham -0.10686 * region_York -0.12074 * region_Peel -0.07529 * size_c_squared -0.18241 * vehicles_c_squared +0.05213 * size_x_drivers +0.11677 * size_x_vehicles
+Predicted trips = 3.38628 +0.21418 * size_c +0.51867 * vehicles_c +0.60043 * drivers_c +0.98897 * full_time +1.13838 * part_time -0.17641 * home_workers +1.56346 * students -0.63920 * dwelling_Apartment -0.20850 * dwelling_Townhouse +0.11539 * weekday_Tuesday +0.13771 * weekday_Wednesday +0.16044 * weekday_Thursday +0.27748 * weekday_Friday
 
-Here `size_c = size - 3`, `vehicles_c = vehicles - 1`, and `drivers_c = licensed drivers - 2`; squared and interaction columns use these centered values. The model has 21 coefficients including its intercept. Training R-squared is 0.4667. Training RMSE is 3.3218; reserved-test RMSE is 3.3631 and reserved-test MAE is 2.4045. These are household trip-count errors, not causal effects. The best additive linear model, which contains no squares or interactions, has reserved-test RMSE 3.3683.
+Here `size_c = size - 3`, `vehicles_c = vehicles - 1`, and `drivers_c = licensed drivers - 2`; interaction columns use these centered values. The model has 14 coefficients including its intercept. Training R-squared is 0.4631. Training RMSE is 3.3330; reserved-test RMSE is 3.3683 and reserved-test MAE is 2.4102. These are household trip-count errors, not causal effects. The best additive linear model, which contains no interactions, has reserved-test RMSE 3.3683.
 
 | model | effects | parameters | train_rmse | train_mae | test_rmse | test_mae | test_mean_prediction_error | test_negative_predictions | n_train | n_test |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -42,93 +42,129 @@ Here `size_c = size - 3`, `vehicles_c = vehicles - 1`, and `drivers_c = licensed
 | Simple four-predictor model | size + vehicles + full_time + students | 5 | 3.41932 | 2.45838 | 3.46114 | 2.48271 | 0.01753 | 0 | 65287 | 27978 |
 | Size and licensed drivers | size + drivers | 3 | 3.60181 | 2.57804 | 3.64754 | 2.60237 | 0.01653 | 0 | 65287 | 27978 |
 | Best additive linear model | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday | 14 | 3.33298 | 2.39163 | 3.36827 | 2.41015 | 0.01757 | 0 | 65287 | 27978 |
-| Selected alternative model | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + region + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 21 | 3.32184 | 2.38351 | 3.36305 | 2.40445 | 0.01741 | 3 | 65287 | 27978 |
+| Selected alternative model | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday | 14 | 3.33298 | 2.39163 | 3.36827 | 2.41015 | 0.01757 | 0 | 65287 | 27978 |
+
+The centered main coefficients describe conditional slopes at three persons, one vehicle, and two licensed drivers. When retained, interactions allow the licence-holder and vehicle slopes to vary with household size. [The vehicle-response figure](figures/MLR_04_vehicle_response.png) uses the revised model. The `Derived_MLR` sheet reports these slopes, and `Negative_predictions` lists every negative prediction without clipping.
+
+## Derived quantities
+
+| Quantity | Value | Unit | Reference / denominator | Sample | Source / formula |
+| --- | ---: | --- | --- | --- | --- |
+| Outcome n | 65287 | households | training households | training | nhhldtrip; sample SD uses ddof=1 |
+| Outcome mean | 5.642364 | trips | training households | training | nhhldtrip; sample SD uses ddof=1 |
+| Outcome SD | 4.548931 | trips | training households | training | nhhldtrip; sample SD uses ddof=1 |
+| Outcome zero count | 7274 | households | training households | training | nhhldtrip; sample SD uses ddof=1 |
+| Outcome zero share | 0.1114157 | proportion | training households | training | nhhldtrip; sample SD uses ddof=1 |
+| Negative prediction count | 0 | households | training | training | Selected model: prediction < 0 |
+| Minimum prediction | 0.5991799 | trips | training | training | Selected prediction minimum across all households |
+| Minimum negative prediction | nan | trips | negative predictions | training | Minimum restricted to prediction < 0; NA if none |
+| Negative prediction vehicle min | nan | vehicles | negative predictions | training | nvehicle among negative predictions; NA if none |
+| Negative prediction vehicle max | nan | vehicles | negative predictions | training | nvehicle among negative predictions; NA if none |
+| Outcome n | 27978 | households | test households | test | nhhldtrip; sample SD uses ddof=1 |
+| Outcome mean | 5.644256 | trips | test households | test | nhhldtrip; sample SD uses ddof=1 |
+| Outcome SD | 4.593239 | trips | test households | test | nhhldtrip; sample SD uses ddof=1 |
+| Outcome zero count | 3200 | households | test households | test | nhhldtrip; sample SD uses ddof=1 |
+| Outcome zero share | 0.1143756 | proportion | test households | test | nhhldtrip; sample SD uses ddof=1 |
+| Negative prediction count | 0 | households | test | test | Selected model: prediction < 0 |
+| Minimum prediction | 0.5991799 | trips | test | test | Selected prediction minimum across all households |
+| Minimum negative prediction | nan | trips | negative predictions | test | Minimum restricted to prediction < 0; NA if none |
+| Negative prediction vehicle min | nan | vehicles | negative predictions | test | nvehicle among negative predictions; NA if none |
+| Negative prediction vehicle max | nan | vehicles | negative predictions | test | nvehicle among negative predictions; NA if none |
+| BIC rank 2 minus rank 1 | 2.499442 | BIC | rank 1 | training | MLR04: BIC[2] - BIC[1] |
+| Rank 2 omits from rank 1 | weekday | effects | rank 1 | training | Set difference of candidate effects |
+| Best additive BIC rank | 1 | rank | rank 1 for gap | training | MLR04: lowest BIC without interactions |
+| Best additive BIC gap to rank 1 | 0 | BIC | rank 1 for gap | training | MLR04: lowest BIC without interactions |
+| Best additive R squared | 0.4631485 | R squared | rank 1 for gap | training | MLR04: lowest BIC without interactions |
+| Licence-holder slope; persons=1 | 0.6004314 | trips per unit | persons=1; other predictors fixed | training | drivers_c + size_x_drivers * (persons - 3); absent effects = 0 |
+| Vehicle slope; persons=1 | 0.5186692 | trips per unit | persons=1; other predictors fixed | training | vehicles_c + size_x_vehicles * (persons - 3); absent effects = 0 |
+| Licence-holder slope; persons=2 | 0.6004314 | trips per unit | persons=2; other predictors fixed | training | drivers_c + size_x_drivers * (persons - 3); absent effects = 0 |
+| Vehicle slope; persons=2 | 0.5186692 | trips per unit | persons=2; other predictors fixed | training | vehicles_c + size_x_vehicles * (persons - 3); absent effects = 0 |
+| Licence-holder slope; persons=3 | 0.6004314 | trips per unit | persons=3; other predictors fixed | training | drivers_c + size_x_drivers * (persons - 3); absent effects = 0 |
+| Vehicle slope; persons=3 | 0.5186692 | trips per unit | persons=3; other predictors fixed | training | vehicles_c + size_x_vehicles * (persons - 3); absent effects = 0 |
+| Licence-holder slope; persons=4 | 0.6004314 | trips per unit | persons=4; other predictors fixed | training | drivers_c + size_x_drivers * (persons - 3); absent effects = 0 |
+| Vehicle slope; persons=4 | 0.5186692 | trips per unit | persons=4; other predictors fixed | training | vehicles_c + size_x_vehicles * (persons - 3); absent effects = 0 |
+| Licence-holder slope; persons=5 | 0.6004314 | trips per unit | persons=5; other predictors fixed | training | drivers_c + size_x_drivers * (persons - 3); absent effects = 0 |
+| Vehicle slope; persons=5 | 0.5186692 | trips per unit | persons=5; other predictors fixed | training | vehicles_c + size_x_vehicles * (persons - 3); absent effects = 0 |
+| Unadjusted Durham minus Toronto | 1.39489 | trips | Toronto | training | Regional means difference |
+| Adjusted Durham minus Toronto | 0 | trips | Toronto | training | Selected region coefficient; zero if region omitted |
+| Unadjusted York minus Toronto | 1.773869 | trips | Toronto | training | Regional means difference |
+| Adjusted York minus Toronto | 0 | trips | Toronto | training | Selected region coefficient; zero if region omitted |
+| Unadjusted Peel minus Toronto | 1.570548 | trips | Toronto | training | Regional means difference |
+| Adjusted Peel minus Toronto | 0 | trips | Toronto | training | Selected region coefficient; zero if region omitted |
 
 ## Candidate leaders and coefficient uncertainty
 
 | bic_rank | aic_rank | effects | parameters | aic | bic | selected_alternative |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + region + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 21 | 342075.1 | 342265.9 | 1 |
-| 2 | 5 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 18 | 342104.9 | 342268.5 | 0 |
-| 3 | 2 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + region + size_squared + vehicles_squared + size_by_vehicles | 20 | 342088.5 | 342270.2 | 0 |
-| 4 | 7 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + region + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 17 | 342116.6 | 342271 | 0 |
-| 5 | 18 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 14 | 342144.6 | 342271.8 | 0 |
-| 6 | 8 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + size_squared + vehicles_squared + size_by_vehicles | 17 | 342117.6 | 342272.1 | 0 |
-| 7 | 12 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + region + size_squared + vehicles_squared + size_by_vehicles | 16 | 342129.7 | 342275.1 | 0 |
-| 8 | 24 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + size_squared + vehicles_squared + size_by_vehicles | 13 | 342157 | 342275.2 | 0 |
-| 9 | 3 | size + vehicles + drivers + full_time + part_time + students + dwelling + weekday + region + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 20 | 342094.9 | 342276.7 | 0 |
-| 10 | 11 | size + vehicles + drivers + full_time + part_time + students + dwelling + weekday + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 17 | 342124.5 | 342279 | 0 |
-| 11 | 14 | size + vehicles + drivers + full_time + part_time + students + dwelling + region + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 16 | 342136.7 | 342282.1 | 0 |
-| 12 | 6 | size + vehicles + drivers + full_time + part_time + students + dwelling + weekday + region + size_squared + vehicles_squared + size_by_vehicles | 19 | 342109.5 | 342282.2 | 0 |
-| 13 | 28 | size + vehicles + drivers + full_time + part_time + students + dwelling + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 13 | 342164.5 | 342282.6 | 0 |
-| 14 | 17 | size + vehicles + drivers + full_time + part_time + students + dwelling + weekday + size_squared + vehicles_squared + size_by_vehicles | 16 | 342138.4 | 342283.7 | 0 |
-| 15 | 4 | size + vehicles + drivers + workers + home_workers + students + dwelling + weekday + region + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 20 | 342103.3 | 342285 | 0 |
-| 16 | 32 | size + vehicles + drivers + full_time + part_time + students + dwelling + size_squared + vehicles_squared + size_by_vehicles | 12 | 342178 | 342287.1 | 0 |
-| 17 | 21 | size + vehicles + drivers + full_time + part_time + students + dwelling + region + size_squared + vehicles_squared + size_by_vehicles | 15 | 342151 | 342287.3 | 0 |
-| 18 | 13 | size + vehicles + drivers + workers + home_workers + students + dwelling + weekday + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 17 | 342135.1 | 342289.5 | 0 |
-| 19 | 19 | size + vehicles + drivers + workers + home_workers + students + dwelling + region + size_squared + vehicles_squared + size_by_drivers + size_by_vehicles | 16 | 342144.7 | 342290 | 0 |
-| 20 | 9 | size + vehicles + drivers + workers + home_workers + students + dwelling + weekday + region + size_squared + vehicles_squared + size_by_vehicles | 19 | 342119.4 | 342292 | 0 |
+| 1 | 14 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday | 14 | 342498.3 | 342625.5 | 1 |
+| 2 | 42 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling | 10 | 342537.2 | 342628 | 0 |
+| 3 | 3 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + region | 17 | 342474.9 | 342629.3 | 0 |
+| 4 | 10 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + size_by_drivers | 15 | 342494.4 | 342630.7 | 0 |
+| 5 | 37 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + size_by_drivers | 11 | 342533 | 342633 | 0 |
+| 6 | 24 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + region | 13 | 342515.4 | 342633.5 | 0 |
+| 7 | 2 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + region + size_by_drivers | 18 | 342471.2 | 342634.8 | 0 |
+| 8 | 16 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + size_by_vehicles | 15 | 342500.2 | 342636.4 | 0 |
+| 9 | 28 | size + vehicles + drivers + full_time + part_time + students + dwelling + weekday | 13 | 342518.4 | 342636.6 | 0 |
+| 10 | 7 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + size_by_drivers + size_by_vehicles | 16 | 342492.3 | 342637.7 | 0 |
+| 11 | 19 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + region + size_by_drivers | 14 | 342511.5 | 342638.7 | 0 |
+| 12 | 46 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + size_by_vehicles | 11 | 342538.9 | 342638.9 | 0 |
+| 13 | 57 | size + vehicles + drivers + full_time + part_time + students + dwelling | 9 | 342557.5 | 342639.3 | 0 |
+| 14 | 31 | size + vehicles + drivers + workers + home_workers + students + dwelling + weekday | 13 | 342521.6 | 342639.7 | 0 |
+| 15 | 34 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + size_by_drivers + size_by_vehicles | 12 | 342531.1 | 342640.1 | 0 |
+| 16 | 4 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + region + size_by_vehicles | 18 | 342476.7 | 342640.3 | 0 |
+| 17 | 11 | size + vehicles + drivers + full_time + part_time + students + dwelling + weekday + region | 16 | 342495.1 | 342640.5 | 0 |
+| 18 | 1 | size + vehicles + drivers + full_time + part_time + home_workers + students + dwelling + weekday + region + size_by_drivers + size_by_vehicles | 19 | 342469.2 | 342641.8 | 0 |
+| 19 | 12 | size + vehicles + drivers + workers + home_workers + students + dwelling + weekday + region | 16 | 342496.5 | 342641.9 | 0 |
+| 20 | 59 | size + vehicles + drivers + workers + home_workers + students + dwelling | 9 | 342560.2 | 342642 | 0 |
 
 | effect | df_effect | clustered_F | p_clustered | p_classical | df_cluster_denominator | protected_or_hierarchy |
 | --- | --- | --- | --- | --- | --- | --- |
-| size | 1 | 147.6086 | 4.72e-32 | 5.33e-38 | 1157 | Prespecified substantive core |
-| vehicles | 1 | 831.6999 | 2.99e-138 | 4.8e-191 | 1157 | Required by hierarchy: vehicles_squared, size_by_vehicles |
-| drivers | 1 | 367.7616 | 2.16e-71 | 3.9e-91 | 1157 | Required by hierarchy: size_by_drivers |
-| full_time | 1 | 2038.697 | 1.64e-257 | <1e-300 | 1157 | Eligible for removal |
-| part_time | 1 | 1000.997 | 8.44e-159 | <1e-300 | 1157 | Eligible for removal |
-| home_workers | 1 | 12.05452 | 0.00054 | 2.89e-06 | 1157 | Eligible for removal |
-| students | 1 | 3420.336 | <1e-300 | <1e-300 | 1157 | Eligible for removal |
-| dwelling | 2 | 143.0475 | 3.06e-56 | 2.67e-56 | 1157 | Eligible for removal |
-| weekday | 4 | 12.56641 | 5.19e-10 | 4.57e-10 | 1157 | Eligible for removal |
-| region | 3 | 6.685428 | 0.00018 | 8.1e-08 | 1157 | Eligible for removal |
-| size_squared | 1 | 60.04891 | 2.02e-14 | 1.02e-33 | 1157 | Eligible for removal |
-| vehicles_squared | 1 | 181.8394 | 1.34e-38 | 1.53e-68 | 1157 | Eligible for removal |
-| size_by_drivers | 1 | 9.719783 | 0.00187 | 8.7e-05 | 1157 | Eligible for removal |
-| size_by_vehicles | 1 | 36.97118 | 1.63e-09 | 1.1e-15 | 1157 | Eligible for removal |
+| size | 1 | 110.9678 | 7.68e-25 | 3.18e-39 | 1157 | Eligible for removal |
+| vehicles | 1 | 489.8241 | 8.72e-91 | 5.69e-132 | 1157 | Eligible for removal |
+| drivers | 1 | 529.6789 | 8.34e-97 | 1.76e-157 | 1157 | Eligible for removal |
+| full_time | 1 | 2080.789 | 8.42e-261 | <1e-300 | 1157 | Eligible for removal |
+| part_time | 1 | 1006.14 | 2.13e-159 | <1e-300 | 1157 | Eligible for removal |
+| home_workers | 1 | 12.06333 | 0.00053 | 2.54e-06 | 1157 | Eligible for removal |
+| students | 1 | 3257.65 | <1e-300 | <1e-300 | 1157 | Eligible for removal |
+| dwelling | 2 | 197.0948 | 2.18e-74 | 1.24e-81 | 1157 | Eligible for removal |
+| weekday | 4 | 11.7877 | 2.18e-09 | 1.65e-09 | 1157 | Eligible for removal |
 
 | column | effect | estimate | SE_zone_clustered | t_zone_clustered | p_zone_clustered | CI99_lower_zone_clustered | CI99_upper_zone_clustered | p_classical |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Intercept | Intercept | 3.486251 | 0.0589896 | 59.09941 | <1e-300 | 3.334053 | 3.638449 | <1e-300 |
-| size_c | size | 0.2550988 | 0.02099678 | 12.14943 | 4.72e-32 | 0.2009254 | 0.3092723 | 5.33e-38 |
-| vehicles_c | vehicles | 0.8394729 | 0.02910874 | 28.83921 | 2.99e-138 | 0.7643699 | 0.9145759 | 4.8e-191 |
-| drivers_c | drivers | 0.4827431 | 0.02517288 | 19.17711 | 2.16e-71 | 0.4177949 | 0.5476912 | 3.9e-91 |
-| full_time | full_time | 0.9759466 | 0.02161472 | 45.15194 | 1.64e-257 | 0.9201788 | 1.031714 | <1e-300 |
-| part_time | part_time | 1.139327 | 0.03601072 | 31.63854 | 8.44e-159 | 1.046416 | 1.232237 | <1e-300 |
-| home_workers | home_workers | -0.1750368 | 0.05041438 | -3.471962 | 0.00054 | -0.3051102 | -0.04496342 | 2.89e-06 |
-| students | students | 1.562756 | 0.02672125 | 58.48364 | <1e-300 | 1.493813 | 1.631699 | <1e-300 |
-| dwelling_Apartment | dwelling | -0.5452467 | 0.03252404 | -16.76442 | 1.23e-56 | -0.6291615 | -0.4613319 | 1.49e-57 |
-| dwelling_Townhouse | dwelling | -0.1849086 | 0.0549565 | -3.364636 | 0.00079 | -0.3267011 | -0.04311617 | 0.00027 |
-| weekday_Tuesday | weekday | 0.115616 | 0.04090418 | 2.826508 | 0.00479 | 0.01007971 | 0.2211523 | 0.00660 |
-| weekday_Wednesday | weekday | 0.1350292 | 0.04106803 | 3.287939 | 0.00104 | 0.02907015 | 0.2409882 | 0.00169 |
-| weekday_Thursday | weekday | 0.1703092 | 0.04119788 | 4.13393 | 3.82e-05 | 0.06401511 | 0.2766032 | 5.24e-05 |
-| weekday_Friday | weekday | 0.2827831 | 0.04040298 | 6.999064 | 4.36e-12 | 0.1785399 | 0.3870262 | 6.41e-12 |
-| region_Durham | region | 0.1486629 | 0.05966814 | 2.491495 | 0.01286 | -0.005285991 | 0.3026118 | 0.00120 |
-| region_York | region | -0.1068555 | 0.05844652 | -1.82826 | 0.06777 | -0.2576525 | 0.04394155 | 0.00733 |
-| region_Peel | region | -0.120737 | 0.05016805 | -2.406652 | 0.01626 | -0.2501749 | 0.008700806 | 0.00082 |
-| size_c_squared | size_squared | -0.07528981 | 0.009715913 | -7.749123 | 2.02e-14 | -0.1003577 | -0.05022192 | 1.02e-33 |
-| vehicles_c_squared | vehicles_squared | -0.1824129 | 0.01352731 | -13.48478 | 1.34e-38 | -0.2173145 | -0.1475113 | 1.53e-68 |
-| size_x_drivers | size_by_drivers | 0.05212784 | 0.0167202 | 3.117657 | 0.00187 | 0.0089883 | 0.09526738 | 8.7e-05 |
-| size_x_vehicles | size_by_vehicles | 0.1167696 | 0.01920429 | 6.080393 | 1.63e-09 | 0.06722092 | 0.1663183 | 1.1e-15 |
+| Intercept | Intercept | 3.386277 | 0.05306155 | 63.81792 | <1e-300 | 3.249374 | 3.523181 | <1e-300 |
+| size_c | size | 0.2141806 | 0.02033207 | 10.53413 | 7.68e-25 | 0.1617221 | 0.2666391 | 3.18e-39 |
+| vehicles_c | vehicles | 0.5186692 | 0.02343529 | 22.13197 | 8.72e-91 | 0.4582041 | 0.5791342 | 5.69e-132 |
+| drivers_c | drivers | 0.6004314 | 0.02608898 | 23.01475 | 8.34e-97 | 0.5331196 | 0.6677432 | 1.76e-157 |
+| full_time | full_time | 0.9889744 | 0.02168059 | 45.61567 | 8.42e-261 | 0.9330367 | 1.044912 | <1e-300 |
+| part_time | part_time | 1.138379 | 0.03588868 | 31.71971 | 2.13e-159 | 1.045783 | 1.230974 | <1e-300 |
+| home_workers | home_workers | -0.1764105 | 0.05079148 | -3.473231 | 0.00053 | -0.3074569 | -0.04536418 | 2.54e-06 |
+| students | students | 1.563465 | 0.02739276 | 57.07583 | <1e-300 | 1.492789 | 1.63414 | <1e-300 |
+| dwelling_Apartment | dwelling | -0.6392045 | 0.03255571 | -19.63417 | 2.63e-74 | -0.723201 | -0.555208 | 5.13e-83 |
+| dwelling_Townhouse | dwelling | -0.2084959 | 0.05546056 | -3.759354 | 0.00018 | -0.3515888 | -0.06540288 | 3.9e-05 |
+| weekday_Tuesday | weekday | 0.1153949 | 0.04096143 | 2.817161 | 0.00493 | 0.009710967 | 0.2210789 | 0.00688 |
+| weekday_Wednesday | weekday | 0.1377126 | 0.04123515 | 3.339689 | 0.00087 | 0.03132237 | 0.2441027 | 0.00141 |
+| weekday_Thursday | weekday | 0.1604371 | 0.04135849 | 3.879182 | 0.00011 | 0.0537287 | 0.2671456 | 0.00014 |
+| weekday_Friday | weekday | 0.2774774 | 0.04077163 | 6.805649 | 1.61e-11 | 0.1722831 | 0.3826717 | 1.81e-11 |
 
 ## Diagnostics and zone evaluation
 
-Training residual skewness is 1.456 and excess kurtosis is 5.849. 970 training records have absolute externally studentized residuals above 3; these are review markers and are retained. There are 3 negative reserved-test predictions. Count-outcome and survey-weight limitations remain relevant. The data guide records trips only for persons aged 11+, while the student count includes assumed students aged 6-10.
+Training residual skewness is 1.465 and excess kurtosis is 5.822. 982 training records have absolute externally studentized residuals above 3; these are review markers and are retained. There are 0 negative reserved-test predictions. Count-outcome and survey-weight limitations remain relevant. The data guide records trips only for persons aged 11+, while the student count includes assumed students aged 6-10.
 
 | evaluation | zones | MAE | RMSE | mean_prediction_error_pred_minus_obs | status |
 | --- | --- | --- | --- | --- | --- |
-| Sample zone totals | 1081 | 14.3863 | 20.2717 | 0.4506 | Reserved-test zone agreement |
-| Expansion-weighted zone totals | 1081 | 278.3034 | 395.2696 | 11.0595 | Reserved-test zone agreement |
+| Sample zone totals | 1081 | 14.4589 | 20.3315 | 0.4547 | Reserved-test zone agreement |
+| Expansion-weighted zone totals | 1081 | 279.6017 | 396.1838 | 10.7359 | Reserved-test zone agreement |
 
 | evaluation | observed_mean | predicted_mean | MAE | RMSE | mean_prediction_error |
 | --- | --- | --- | --- | --- | --- |
-| Unweighted reserved-test households | 5.6443 | 5.6617 | 2.4045 | 3.3631 | 0.0174 |
-| Expansion-weighted reserved-test households; coefficients still unweighted OLS | 5.643 | 5.6651 | 2.4028 | 3.3615 | 0.0221 |
+| Unweighted reserved-test households | 5.6443 | 5.6618 | 2.4102 | 3.3683 | 0.0176 |
+| Expansion-weighted reserved-test households; coefficients still unweighted OLS | 5.643 | 5.6644 | 2.4081 | 3.3665 | 0.0214 |
 
-Traffic-zone sample and expanded totals use the same reserved-test records. Expansion factors are applied consistently to observed and predicted totals. Coefficients are unweighted OLS. The cross-classification comparison uses the same eligible IDs and seeded split.
+Traffic-zone sample and expanded totals use the same reserved-test records. Expansion factors are applied consistently to observed and predicted totals. The expanded sums cover the test subset and are not full-population zone totals. Coefficients are unweighted OLS. The cross-classification comparison uses the same eligible IDs and seeded split.
 
 ## Reproduction and files
 
-Run `MLR_regression.ipynb` top to bottom from the project root with the requirements in requirements.txt. `final_outputs/MLR_regression/MLR_regression_results.xlsx` contains the full candidate list, coefficient and diagnostic tables, working sample, exclusions, and both prediction sets. `selected_MLR_regression_model.json` records the equation, selection settings, source hash, and split hashes. Figures are saved in `final_outputs/MLR_regression/figures`.
+Run `MLR_regression.ipynb` top to bottom from the project root with the requirements in requirements.txt. `final_outputs/MLR_regression/MLR_regression_results.xlsx` contains the full candidate list, coefficient and diagnostic tables, the vehicle-response table, working sample, exclusions, and both prediction sets. `selected_MLR_regression_model.json` records the equation, selection settings, source hash, and split hashes. Figures are saved in `final_outputs/MLR_regression/figures`.
 
 Source workbook SHA256: 7bced1105d00a6b468289110a4a4d1684591e9bb74c878a927e3bec979efea90
 

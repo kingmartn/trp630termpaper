@@ -17,7 +17,15 @@ The simple starting model uses household persons, vehicles, full-time workers, a
 | dwelling | dwelltype | Housing form can proxy density, parking, and local access conditions. | Categorical proxy; not a measured land-use or causal effect. |
 | weekday | tripday | Daily schedules and activity patterns can vary from Monday to Friday. | Survey weekday is categorical and is not a household attribute. |
 | region | gta01hhld ranges | Broad location may proxy differences in land use, transit access, and travel opportunities. | Four coarse regions derived from zone ID; exact zone ID is not a predictor. |
-| size_squared | (nperson - 3)^2 | Trip growth may taper as household size rises. | Curvature is exploratory and may be unstable in rare large households. |
-| vehicles_squared | (nvehicle - 1)^2 | The marginal association of another vehicle may diminish. | Curvature is exploratory; high-vehicle records are excluded by the common rule. |
 | size_by_drivers | (nperson - 3) × (nlicence - 2) | Driver availability may matter differently in small and large households. | Interaction requires both main effects and is not causal. |
 | size_by_vehicles | (nperson - 3) × (nvehicle - 1) | The usefulness of vehicles may depend on how many residents share them. | Interaction requires both main effects and is not causal. |
+
+## Specification and centering
+
+All main effects are optional in the alternative search. An interaction enters only with both supporting main effects. The simple four-predictor benchmark remains prespecified.
+
+The fixed reference values are three persons, one vehicle, and two licensed drivers. These are project choices, not estimated means or constants adopted from another study. Centering makes zero represent those reference counts. For a hierarchical interaction model, expanding `(P-3)(V-1)` gives `PV-P-3V+3`, so centering only re-expresses terms already in the model; it leaves fitted values unchanged. It does not establish a causal interpretation or guarantee reduced multicollinearity. [Cornell's explanation of centering](https://cscu.cornell.edu/wp-content/uploads/centering.pdf) describes this interpretation.
+
+An interaction allows the vehicle or driver association to depend on household size. It does not force households without cars to make fewer total trips: walking and transit remain possible, and the response includes all recorded trips. The estimated signs and conditional predictions determine what this dataset supports.
+
+The squared terms were removed after the first evaluation because their parabolic form made predicted trips fall at high vehicle counts and produced negative predictions. This was a specification revision after test results had been seen; subsequent test scores describe internal validation. [TCRP Report 128, pp. 44–45](https://www.trb.org/publications/tcrp/tcrp_rpt_128.pdf) illustrates a quadratic relationship between transit-oriented housing trip rates and station distance. Its predictor and observational unit differ from this household analysis, so it does not validate our former household-size or vehicle squares.
