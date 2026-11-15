@@ -169,7 +169,7 @@ for row in range(5):
                 color="white" if n and image.norm(rates.iat[row, col]) > .68 else INK)
 fig.colorbar(image, ax=ax, label="Mean weekday trips per household", shrink=.85)
 fig.tight_layout()
-fig.savefig(FIGURES / "CC_02_training_cell_rates.png", dpi=220, facecolor="white")
+fig.savefig(FIGURES / "CC_02_training_cell_rates.png", dpi=400, facecolor="white")
 plt.close(fig)
 del train
 
@@ -290,7 +290,7 @@ for letter, ax in zip("ab", axes):
     ax.text(0, 1.03, f"({letter})", transform=ax.transAxes,
             ha="left", va="bottom", fontweight="bold")
 fig.tight_layout()
-fig.savefig(FIGURES / "CC_01_heldout_agreement.png", dpi=220)
+fig.savefig(FIGURES / "CC_01_heldout_agreement.png", dpi=400)
 plt.close(fig)
 
 
