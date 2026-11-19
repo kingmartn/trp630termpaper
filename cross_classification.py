@@ -1,8 +1,4 @@
-"""Train and evaluate household trip-rate cross-classification on the shared split.
 
-Run from the project root with /home/mst_lab/geo_env/bin/python cross_classification.py.
-The held-out workbook is opened only after all rate models have been fitted.
-"""
 
 from pathlib import Path
 
