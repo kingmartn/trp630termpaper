@@ -17,7 +17,7 @@ If you use another notebook editor, install `requirements.txt` and select the `.
 
 ## Run the analysis
 
-1. Run `Household_EDA_updated.ipynb` from top to bottom. It reads the source workbook, creates the training and test split, and saves the EDA results and figures.
+1. Run `Household_EDA.ipynb` from top to bottom. It reads the source workbook, creates the training and test split, and saves the EDA results and figures.
 2. Run `MLR_regression.ipynb` from top to bottom using the same kernel. It fits the regression models and saves their results, figures, and selected model.
 3. In a terminal with the environment active, run:
 
@@ -34,8 +34,7 @@ If you use another notebook editor, install `requirements.txt` and select the `.
 | `inputs/` | Source household workbook and 2006 TTS data guide. |
 | `split_policy.py` | Shared, reproducible household split used by all three analyses. |
 | `intermediaries/` | Training and test workbooks created by the EDA notebook. |
-| `final_outputs/EDA/` | EDA workbook and figures. |
+| `final_outputs/EDA/` | EDA workbook and figures, including PDF figures. |
 | `final_outputs/MLR_regression/` | Regression workbook, figures, and selected model JSON. |
 | `final_outputs/cross_classification/` | Cross-classification workbook and figures. |
 | `final_outputs/model_comparison.xlsx` | Side-by-side model results. |
-| `paper/figures/` | PDF figures for the paper. |

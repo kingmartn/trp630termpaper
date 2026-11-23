@@ -93,12 +93,18 @@ def predict(model, frame):
 
 def metrics(label, actual, predicted, weights):
     error = predicted - actual
+    total_variation = np.sum((actual - actual.mean()) ** 2)
+    weighted_mean = np.average(actual, weights=weights)
+    weighted_total_variation = np.sum(weights * (actual - weighted_mean) ** 2)
+    assert total_variation > 0 and weighted_total_variation > 0
     return {"model": label, "n": len(actual),
             "MAE": np.mean(np.abs(error)),
             "RMSE": np.sqrt(np.mean(error ** 2)),
+            "test_R2": 1 - np.sum(error ** 2) / total_variation,
             "mean_error_pred_minus_obs": np.mean(error),
             "weighted_MAE": np.average(np.abs(error), weights=weights),
             "weighted_RMSE": np.sqrt(np.average(error ** 2, weights=weights)),
+            "weighted_test_R2": 1 - np.sum(weights * error ** 2) / weighted_total_variation,
             "weighted_mean_error": np.average(error, weights=weights)}
 
 
@@ -298,6 +304,11 @@ b = benchmark.set_index('model')
 base=b.loc['Training mean']; cc=b.loc['Cross-classification']; selected=b.loc['Multiple linear regression']
 two=b.loc['Regression (size and drivers)']; simple=b.loc['Simple four-predictor regression']
 for model,row in b.iterrows():
+    derive(f'{model}: test R2',row['test_R2'],'proportion','test observed mean','test',
+        '1 - sum((predicted - observed)^2) / sum((observed - test mean)^2)')
+    derive(f'{model}: weighted test R2',row['weighted_test_R2'],'proportion',
+        'expansion-weighted test observed mean','test',
+        '1 - sum(expf * (predicted - observed)^2) / sum(expf * (observed - weighted test mean)^2)')
     for metric in ['MAE','RMSE']:
         derive(f'{model}: {metric} reduction vs training-mean benchmark',100*(base[metric]-row[metric])/base[metric],
             'percent','training-mean benchmark '+metric,'test','100 * (benchmark - model) / benchmark')
